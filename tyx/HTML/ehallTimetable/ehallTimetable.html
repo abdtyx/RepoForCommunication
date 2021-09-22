@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class=""><head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    
+
+<script>
+    window.WIS_CONFIG = {
+        ROOT_PATH: "/jwapp",
+        PATH: "/jwapp",
+        APPID: "4770397878132218",
+        APPNAME: "wdkb",
+    };
+
+    var contextPath = "/jwapp";
+    var path = window.location.href;
+    var end = path.indexOf('/sys/');
+    var context_path = path.substring(0, end);
+    var appname = WIS_CONFIG.APPNAME;
+    var appid = WIS_CONFIG.APPID;
+    var app_path = context_path + "/sys/" + appname;
+    var roleId = "20150808183545465";
+    window.APP_CONFIG = {
+        ROOT_PATH: "/jwapp",
+        PATH: "/jwapp",
+        APP_VERSION: "1632276606617",
+        "MODULE_PATH": app_path + '/modules/',
+
+        "FE_DEBUG_MODE": false,
+
+        "ISSENTRY": true,
+        /*
+        	业务线开发模式，转测时置false
+         */
+        "DEBUG_MODE": false,
+
+        /*
+        	资源服务器地址
+         */
+        "RESOURCE_SERVER": "http://res.xjtu.edu.cn",
+
+
+        "BH_VERSION": '1.2',
+
+        /*
+         * 主题 blue purple
+         */
+        "THEME": "blue",
+        
+        "firstDayOfWeek":'1',
+        /*
+        	服务器端生成配置API(API_BASE_PATH目录下)
+        	@example "/config.do" ./mock/serverconfig.json
+         */
+        "SERVER_CONFIG_API": context_path + "/sys/funauthapp/api/getAppConfig/" + appname + "-" +
+            appid + ".do",
+
+        /*
+        	APP默认路由
+         */
+        'APP_ENTRY': "",
+
+        /*
+        	应用底部说明文本
+         */
+        "FOOTER_TEXT": "西安交通大学",
+        "HEADER": {
+            "dropMenuCallback": function(item) {
+                if (item.id == pageMeta.params.ROLEID) {
+                    return false;
+                }
+                var url = WIS_CONFIG.ROOT_PATH + "/sys/funauthapp/api/changeAppRole/" + WIS_CONFIG.APPNAME + "/" + item.id + ".do";
+                $.ajax({
+                    url: url,
+                    type: 'post',
+                    async: false,
+                    error: function() {
+                        $.bhDialog({
+                            title: '切换失败',
+                            iconType: 'warning'
+                        });
+                    },
+                    success: function(data) {
+                        if (data != "" && data != null) {
+                            BH_UTILS.doSyncAjax(WIS_CONFIG.ROOT_PATH + '/sys/jwpubapp/pub/setJwCommonAppRole.do', {
+                                "ROLEID": item.id
+                            });
+                            location.href = location.href.replace(/&?gid_=[^&]*/, '').replace(/&?_yhz=[^&]*/, '').replace(/#.*/, '');
+                        }
+                    }
+                });
+            },
+            "logo": "http://ehall.xjtu.edu.cn/new/portal/custom/img/logo/ll/logo-mini.png",
+            "icons": ["icon-apps"]
+        },
+        "TEMPLATE_AFTER_RENDER": function(html) {
+            WIS_EMAP_CONFIG['emapdatatable.fxss'] = true;
+            WIS_EMAP_CONFIG['emapdatatable.isOnceEmpty'] = 'false'==='true'?true:false;
+            window.emapdatatableDefaultPageSize = '';
+            window.exportZipMaXFileNum = Number('10');
+            window.platformDomainName = '';
+            return html;
+        }
+    };
+    var APP_CFG = {
+        "app_footer": "西安交通大学",
+        "app_theme": "blue",
+        "res_server_path": "http://res.xjtu.edu.cn",
+        "indexLogoUrl": "http://ehall.xjtu.edu.cn/new/portal/custom/img/logo/ll/logo-mini.png",
+        "header": {
+            "dropMenuCallback": function(item) {
+                if (item.id == pageMeta.params.ROLEID) {
+                    return false;
+                }
+                var url = WIS_CONFIG.ROOT_PATH + "/sys/funauthapp/api/changeAppRole/" + WIS_CONFIG.APPNAME + "/" + item.id + ".do";
+                $.ajax({
+                    url: url,
+                    type: 'post',
+                    data: 'selectedRoleId=' + item.id,
+                    async: false,
+                    error: function() {
+                        $.bhDialog({
+                            title: '切换失败',
+                            iconType: 'warning'
+                        });
+                    },
+                    success: function(data) {
+                        if (data != "" && data != null) {
+                            location.href = location.href.replace(/&?gid_=[^&]*/, '').replace(/&?_yhz=[^&]*/, '').replace(/#.*/, '');
+                        }
+                    }
+                });
+            },
+            "logo": "http://ehall.xjtu.edu.cn/new/portal/custom/img/logo/ll/logo-mini.png",
+            "icons": ["icon-apps"]
+        }
+    };
+</script>
+<script src="http://res.xjtu.edu.cn/fe_components/commonlib.js?av=1632276606617"></script>
+<link rel="stylesheet" href="http://res.xjtu.edu.cn/bower_components/summernote-0.8.1/dist/summernote-bs3.min.css?av=1632276606617">
+<link rel="stylesheet" href="http://res.xjtu.edu.cn/bower_components/summernote-0.8.1/dist/summernote.css?av=1632276606617">
+<script src="http://res.xjtu.edu.cn/bower_components/bootstrap/dist/js/bootstrap.min.js?av=1632276606617"></script>
+<script src="http://res.xjtu.edu.cn/bower_components/summernote-0.8.1/dist/summernote.js?av=1632276606617"></script>
+<script src="http://res.xjtu.edu.cn/bower_components/cropper/cropper.min.js?av=1632276606617"></script>
+<link rel="stylesheet" type="text/css" href="../../jwpubapp/public/css/publicStyle.css?av=1632276606617">
+<link rel="stylesheet" type="text/css" href="../../jwpubapp/public/script/zeroPlugin/dist/zero-plugin.min.css?av=1632276606617">
+<script type="text/javascript" src="../../jwpubapp/public/script/zeroPlugin/dist/zero-plugin.min.js?av=1632276606617"></script>
+<script type="text/javascript" src="../../jwpubapp/public/script/zeroImporter2/zeroImporter2.js?av=1632276606617"></script>
+
+<script src="http://res.xjtu.edu.cn/fe_components/appcore-min.js?av=1632276606617"></script>
+<link rel="stylesheet" type="text/css" href="http://res.xjtu.edu.cn/bower_components/material-design-iconic-font/css/material-design-iconic-font.css?av=1632276606617">
+<link rel="stylesheet" href="../../jwpubapp/public/script/doc/doc.css?av=1632276606617">
+
+<script type="text/javascript" src="../../jwpubapp/public/script/publicfrreport/vue2.js?av=1632276606617"></script>
+<script type="text/javascript" src="../../jwpubapp/public/script/publicfrreport/public-frreport.js?av=1632276606617"></script>
+<script type="text/javascript" src="../../jwpubapp/public/script/jwcommon.js"></script>
+<script type="text/javascript" src="../../stateapp/public/js/common.js"></script>
+<script type="text/javascript" src="../../jwpubapp/public/script/jwrzlb.js?av=1632276606617"></script>
+<script type="text/javascript" src="../../jwpubapp/public/script/jwPackagingMethod.min.js?av=1632276606617"></script>
+    <link rel="stylesheet" type="text/css" href="../public/widget/weekUnitTableInfo/weekUnitTableInfo.css?av=1632276606617">
+    <script src="../public/js/ggFunctions.js?av=1632276606617"></script>
+	<script src="../public/js/jwpublic.js?av=1632276606617"></script>
+	<script src="../public/js/printArea.js?av=1632276606617"></script>
+    <script src="../public/widget/weekUnitTableInfo/weekUnitTableInfo.js?av=1632276606617"></script>
+    <script type="text/javascript" src="../../jwpubapp/public/script/publicExport.js?av=1632276606617"></script>
+    <script type="text/javascript" src="../../jwpubapp/public/script/publicFunction.js?av=1632276606617"></script>
+    <script type="text/javascript">
+		function includeJsAndCssFiles(file) {
+			var includePath = '';
+			if (window.WIS_CONFIG !== undefined && window.WIS_CONFIG.PATH !== undefined) {
+				includePath += window.WIS_CONFIG.PATH;
+			}
+			includePath += '';
+
+			var files = typeof file == "string" ? [ file ] : file;
+			for (var i = 0; i < files.length; i++) {
+				var name = files[i];
+				var att = name.split('.');
+				var ext = att[att.length - 1].toLowerCase();
+				var isCSS = ext == "css";
+				var tag = isCSS ? "link" : "script";
+				var attr = isCSS ? " type='text/css' rel='stylesheet' " : " language='javascript' type='text/javascript' ";
+				var link = (isCSS ? "href" : "src") + "='" + name + "'";
+				if ($(tag + "[" + link + "]").length == 0) {
+					document.write("<" + tag + attr + link + "></" + tag + ">");
+				}
+			}
+		}
+		//var isIe = /msie/.test(navigator.userAgent.toLowerCase());
+		function isIE() { //ie?  
+		    if (!!window.ActiveXObject || "ActiveXObject" in window)  
+		        return true;  
+		    else  
+		        return false;  
+		}  
+		if (isIE()) {
+			includeJsAndCssFiles('../public/widget/weekUnitTableInfo/es6-promise.js');
+		}
+	</script>
+    <script src="../public/widget/weekUnitTableInfo/html2canvas.js?av=1632276606617"></script>
+    <!-- package.js 转测时开放（执行gulp buildapp 命令可以生成该文件）-->
+    <!-- <script type="text/javascript" src="./dest/package.js"></script> -->
+    <!-- 全局变量pageMeta-->
+    <script type="text/javascript">
+        var pageMeta = {"datas":{},"models":[],"routes":{},"params":{"ROLEID":"20150808183545465","USERID":"2203612988"}};
+		var userId = pageMeta.params.USERID;
+		var userName = pageMeta.params.USERNAME;
+        var roleId = pageMeta.params.ROLEID;	
+		window.WIS_CONFIG = {
+			ROOT_PATH: "/jwapp",
+			PATH: "/jwapp",
+			APPID: "4770397878132218",
+			APPNAME:"wdkb"
+		}
+    </script>
+<style type="text/css">.zeromodal-scroll-margin{margin-right:17px;}</style><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="config" src="./config.js?bust=1632325618129"></script><style>.app-ajax-loading .bh-loader-icon-line-border{border: 0px solid #ddd;box-shadow:none;}.app-ajax-loading{position:fixed;z-index:30000;}.app-loading{position:absolute;opacity:0;top:150px;left:-75px;margin-left:50%;z-index:-1;text-align:center}.app-loading-show{z-index:9999;animation:fade-in;animation-duration:0.5s;-webkit-animation:fade-in 0.5s;opacity:1;}@keyframes fade-in{0%{opacity:0}50%{opacity:.4}100%{opacity:1}}@-webkit-keyframes fade-in{0%{opacity:0}50%{opacity:.4}100%{opacity:1}}.spinner>div{width:30px;height:30px;background-color:#4DAAF5;border-radius:100%;display:inline-block;-webkit-animation:bouncedelay 1.4s infinite ease-in-out;animation:bouncedelay 1.4s infinite ease-in-out;-webkit-animation-fill-mode:both;animation-fill-mode:both}.spinner .bounce1{-webkit-animation-delay:-.32s;animation-delay:-.32s}.spinner .bounce2{-webkit-animation-delay:-.16s;animation-delay:-.16s}@-webkit-keyframes bouncedelay{0%,100%,80%{-webkit-transform:scale(0)}40%{-webkit-transform:scale(1)}}@keyframes bouncedelay{0%,100%,80%{transform:scale(0);-webkit-transform:scale(0)}40%{transform:scale(1);-webkit-transform:scale(1)}}</style><title>我的课表</title><link type="text/css" rel="stylesheet" href="http://res.xjtu.edu.cn/fe_components/iconfont/iconfont.css?rv=100003"><link type="text/css" rel="stylesheet" href="http://res.xjtu.edu.cn/fe_components/iconfont_2.0/iconfont.css?rv=100003"><link type="text/css" rel="stylesheet" href="http://res.xjtu.edu.cn/fe_components/jqwidget/millennium/bh-1.2.min.css?rv=100003"><link type="text/css" rel="stylesheet" href="http://res.xjtu.edu.cn/fe_components/jqwidget/millennium/bh-scenes-1.2.min.css?rv=100003"><link type="text/css" rel="stylesheet" href="http://res.xjtu.edu.cn/bower_components/animate.css/animate.min.css?rv=100003"><link type="text/css" rel="stylesheet" href="http://res.xjtu.edu.cn/bower_components/sentsinLayer/skin/layer.css?rv=100003"><link type="text/css" rel="stylesheet" href="./public/css/base.css?av1632276606617"><link type="text/css" rel="stylesheet" href="./public/css/style.css?av1632276606617"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="http://res.xjtu.edu.cn/fe_components/bh_utils.js?rv=100003" src="http://res.xjtu.edu.cn/fe_components/bh_utils.js?rv=100003&amp;av=1632276606617"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="http://res.xjtu.edu.cn/fe_components/amp/ampPlugins.min.js?rv=100003" src="http://res.xjtu.edu.cn/fe_components/amp/ampPlugins.min.js?rv=100003&amp;av=1632276606617"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="http://res.xjtu.edu.cn/fe_components/jqwidget/jqxwidget.min.js?rv=100003" src="http://res.xjtu.edu.cn/fe_components/jqwidget/jqxwidget.min.js?rv=100003&amp;av=1632276606617"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="http://res.xjtu.edu.cn/fe_components/bhtc/moment/min/moment-with-locales.min.js?rv=100003" src="http://res.xjtu.edu.cn/fe_components/bhtc/moment/min/moment-with-locales.min.js?rv=100003&amp;av=1632276606617"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="http://res.xjtu.edu.cn/fe_components/bhtc/sortable/Sortable.js?rv=100003" src="http://res.xjtu.edu.cn/fe_components/bhtc/sortable/Sortable.js?rv=100003&amp;av=1632276606617"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="http://res.xjtu.edu.cn/fe_components/bh-1.2.min.js?rv=100003" src="http://res.xjtu.edu.cn/fe_components/bh-1.2.min.js?rv=100003&amp;av=1632276606617"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="http://res.xjtu.edu.cn/fe_components/emap-1.2.js?rv=100003" src="http://res.xjtu.edu.cn/fe_components/emap-1.2.js?rv=100003&amp;av=1632276606617"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="http://res.xjtu.edu.cn/fe_components/sentry/sentry.min.js?rv=100003" src="http://res.xjtu.edu.cn/fe_components/sentry/sentry.min.js?rv=100003&amp;av=1632276606617"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="modules/xskcb/xskcb" src="./modules/xskcb/xskcb.js?av=1632276606617"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="public/commonpage/kbck/kbck" src="./public/commonpage/kbck/kbck.js?av=1632276606617"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="public/commonpage/zttk/zttk" src="./public/commonpage/zttk/zttk.js?av=1632276606617"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="public/commonpage/kblb/kblb" src="./public/commonpage/kblb/kblb.js?av=1632276606617"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="public/commonpage/zttk/zttkBS" src="./public/commonpage/zttk/zttkBS.js?av=1632276606617"></script></head>
+
+<body style="overflow-y: scroll;"><header bh-header-guid="494b020f-15d7-9ab2-16a3-09b0a93a08c7"><header class="bh-header sc-animated" bh-header-role="bhHeader"><div class="bh-headerBar"><div class="bh-headerBar-content bh-clearfix"><div style="display: none;" class="bh-headerBar-asideMenu" bh-header-role="bhAsideNavIcon"><i class="iconfont icon-menu"></i></div><div class="bh-headerBar-logo"><img src="http://ehall.xjtu.edu.cn/portal/custom/img/school/logo/logo.png"></div><div class="bh-headerBar-title">我的课表</div><div class="bh-headerBar-menu" style="width: calc(100% - 517px);"><div class="bh-headerBar-imgBlock"><img src="http://res.xjtu.edu.cn/images/user.png" bh-header-role="bhHeaderUserInfoIcon"></div><div class="bh-headerBar-roleSwitch" bh-header-role="roleSwitch">学生组</div><div class="bh-headerBar-nav-more" style=""><i class="iconfont icon-keyboardcontrol"></i></div><div class="bh-headerBar-navigate " style="width: calc(100% - 176px);"><a class="bh-hide" href="#/xskcb" bh-header-role="nav-3655e666-d557-7d11-91f8-2fe85991a5cb" style=""><div class="bh-headerBar-nav-item bh-active" title="学生课程表">学生课程表<i class="iconfont icon-keyboardarrowdown" style="display:none"></i></div><b class="bh-headerBar-nav-item-tip"></b></a><div class="bh-headerBar-nav-bar bh-single-animate" style="left: -609px; width: 0px;"></div><div class="bh-headerBar-navBar-cover"></div></div></div></div></div></header><header class="bh-header-mini sc-animated" bh-header-role="bhHeaderMini"><div class="bh-headerBar"><div class="bh-headerBar-content bh-clearfix"><div style="display: none;" class="bh-headerBar-asideMenu" bh-header-role="bhAsideNavIcon"><i class="iconfont icon-menu"></i></div><div class="bh-headerBar-logo"><img src="http://ehall.xjtu.edu.cn/portal/custom/img/school/logo/logo.png"></div><div class="bh-headerBar-title">我的课表</div><div class="bh-headerBar-menu" style="width: calc(100% - 517px);"><div class="bh-headerBar-imgBlock"><img src="http://res.xjtu.edu.cn/images/user.png" bh-header-role="bhHeaderUserInfoIcon"></div><div class="bh-headerBar-roleSwitch" bh-header-role="roleSwitch">学生组</div><div class="bh-headerBar-nav-more"><i class="iconfont icon-keyboardcontrol"></i></div><div class="bh-headerBar-navigate " style="width: calc(100% - 176px);"><a class="bh-hide" href="#/xskcb" bh-header-role="nav-3655e666-d557-7d11-91f8-2fe85991a5cb" style=""><div class="bh-headerBar-nav-item bh-active" title="学生课程表">学生课程表<i class="iconfont icon-keyboardarrowdown" style="display:none"></i></div><b class="bh-headerBar-nav-item-tip"></b></a><div class="bh-headerBar-nav-bar bh-single-animate" style="left: -617px; width: 0px;"></div><div class="bh-headerBar-navBar-cover"></div></div></div></div></div></header><header class="bh-header-bg sc-animated"></header></header><main><article bh-layout-role="single" style="min-height: 628px;">
+    <h2>课表查看<label id="dqxnxq2" class="bh-form-label jxrw-label-term" value="2021-2022-1">2021-2022学年 第一学期</label><a class="jxrw-a-adjust" data-action="更改2">更改</a></h2>
+    <section>
+        <div class="bh-buttons bh-mb-16">
+            <a href="javascript:void(0)" class="bh-btn bh-btn-small bh-btn-primary" id="print_button">打印</a>
+            <a href="javascript:void(0)" class="bh-btn bh-btn-small bh-btn-default" id="down_button">下载</a>
+            <a href="javascript:void(0)" class="bh-btn bh-btn-small bh-btn-default" id="kblb">列表模式</a>
+        </div>
+        <div id="kbAdvancedQuery"></div>
+        <div class="">
+            <div class="bh-l-inline bh-pt-16" style="width:calc(100% - 290px);border-top:solid 1px #eee;margin:0 32px 0 0;">
+                <div style="position:relative;">
+                    <div class="bh-pb-16" style="width:150px;height:40px;margin:0 auto;text-align: center;">
+	                    <div data-action="周课表切换" style="display: none;">
+	                    	<i class="iconfont icon-keyboardarrowleft" data-action="周课表左移" style="cursor:pointer;border:solid 1px #2196f3;border-radius:8px;color:#2196f3;"></i>
+                        	<span class="bh-l-inline bh-color-primary bh-ph-4">第<label class="h2 bh-color-primary bh-l-inline bh-ph-4" id="zkbzc">2</label>周</span>
+                        	<i class="iconfont icon-keyboardarrowright" data-action="周课表右移" style="cursor:pointer;border:solid 1px #2196f3;border-radius:8px;color:#2196f3;"></i>
+	                    </div>
+                    </div>
+                    <div class="bh-color-primary" data-action="周课表学年学期" style="cursor: pointer; position: absolute; right: 0px; top: 0px; display: none;">学期课表</div>
+                    <div class="bh-color-primary" data-action="周课表周课表" style="cursor: pointer; position: absolute; right: 0px; top: 0px;">周课表</div>
+                </div>
+                <div id="print_area">
+                	<div id="kb_title" style="text-align: center;font-size: 20px;"></div>
+                	<div id="ry_infor"></div>
+                	<div id="kcb_container" class="d" style="height:3%;width:100%;"><div class="wut_container">      <table class="wut_table" onselectstart="return false"><tbody><tr>      <td class="mtt_bgcolor_grey" colspan="2">节次/星期</td>  <td class="mtt_bgcolor_grey" style="width:13%" data-week="1">星期一</td>  <td class="mtt_bgcolor_grey" style="width:13%" data-week="2">星期二</td>  <td class="mtt_bgcolor_grey highLight" style="width:13%" data-week="3">星期三</td>  <td class="mtt_bgcolor_grey" style="width:13%" data-week="4">星期四</td>  <td class="mtt_bgcolor_grey" style="width:13%" data-week="5">星期五</td>  <td class="mtt_bgcolor_grey" style="width:13%" data-week="6">星期六</td>  <td class="mtt_bgcolor_grey" style="width:13%" data-week="7">星期日</td></tr> <tr><td class="mtt_bgcolor_grey" rowspan="4">上午</td>  <td class="mtt_bgcolor_grey" data-unit="1">1</td><td data-role="item" data-week="1" data-begin-unit="1" data-end-unit="2" rowspan="2"><div class="mtt_arrange_item " style="background-color:#FFDDD3">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】COMP250105&nbsp;离散数学A1-16周[02]</div>       <div class="mtt_item_room">离散数学A1-16周,星期1,1-2节,西2西-410,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="2" data-begin-unit="1" data-end-unit="2" rowspan="2"></td><td data-role="item" data-week="3" data-begin-unit="1" data-end-unit="2" rowspan="2" class="highLight"><div class="mtt_arrange_item " style="background-color:#D3F4F8">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】ELEC321104&nbsp;电路1-16周[06]</div>       <div class="mtt_item_room">电路1-16周,星期3,1-2节,东2-410,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="4" data-begin-unit="1" data-end-unit="2" rowspan="2"><div class="mtt_arrange_item " style="background-color:#DDE4FE">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】PHYS281609&nbsp;大学物理II-21-16周[01]</div>       <div class="mtt_item_room">大学物理II-21-16周,星期4,1-2节,中2-3219,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="5" data-begin-unit="1" data-end-unit="2" rowspan="2"><div class="mtt_arrange_item " style="background-color:#FFF0CC">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】MLMD103014&nbsp;毛泽东思想和中国特色社会主义理论体系概论1-12周,16周[41]</div>       <div class="mtt_item_room">毛泽东思想和中国特色社会主义理论体系概论1-12周,16周,星期5,1-2节,主楼A-204,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="6" data-begin-unit="1" data-end-unit="2" rowspan="2"><div class="mtt_arrange_item " style="background-color:#E8F3DB">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】MPRA200452&nbsp;金工实习Ⅰ1-16周[27]</div>       <div class="mtt_item_room">金工实习Ⅰ1-16周,星期6,1-4节,工程坊-B机加,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="7" data-begin-unit="1" data-end-unit="2" rowspan="2"></td></tr> <tr>  <td class="mtt_bgcolor_grey" data-unit="2">2</td></tr> <tr>  <td class="mtt_bgcolor_grey" data-unit="3">3</td><td data-role="item" data-week="1" data-begin-unit="3" data-end-unit="4" rowspan="2"><div class="mtt_arrange_item " style="background-color:#FFEACC">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】PHYS281909&nbsp;大学物理实验I-22-16周[15]</div>       <div class="mtt_item_room">大学物理实验I-22-16周,星期1,3-4节,仲英楼-B305,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="2" data-begin-unit="3" data-end-unit="4" rowspan="2"><div class="mtt_arrange_item " style="background-color:#CCEAE7">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】MATH201107&nbsp;复变函数与积分变换1-16周[04]</div>       <div class="mtt_item_room">复变函数与积分变换1-16周,星期2,3-4节,主楼D-205,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="3" data-begin-unit="3" data-end-unit="4" rowspan="2" class="highLight"></td><td data-role="item" data-week="4" data-begin-unit="3" data-end-unit="4" rowspan="2"><div class="mtt_arrange_item " style="background-color:#FFDDD3">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】COMP250105&nbsp;离散数学A1-16周[02]</div>       <div class="mtt_item_room">离散数学A1-16周,星期4,3-4节,西2西-410,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="5" data-begin-unit="3" data-end-unit="4" rowspan="2"><div class="mtt_arrange_item " style="background-color:#CCEAE7">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】MATH201107&nbsp;复变函数与积分变换2-16周(双)[04]</div>       <div class="mtt_item_room">复变函数与积分变换2-16周(双),星期5,3-4节,主楼D-205,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="6" data-begin-unit="3" data-end-unit="4" rowspan="2"><div class="mtt_arrange_item " style="background-color:#E8F3DB">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】MPRA200452&nbsp;金工实习Ⅰ1-16周[27]</div>       <div class="mtt_item_room">金工实习Ⅰ1-16周,星期6,1-4节,工程坊-B机加,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="7" data-begin-unit="3" data-end-unit="4" rowspan="2"></td></tr> <tr>  <td class="mtt_bgcolor_grey" data-unit="4">4</td></tr> <tr><td class="mtt_bgcolor_grey" rowspan="4">下午</td>  <td class="mtt_bgcolor_grey" data-unit="5">5</td><td data-role="item" data-week="1" data-begin-unit="5" data-end-unit="6" rowspan="2"><div class="mtt_arrange_item " style="background-color:#FFF0CC">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】MLMD103014&nbsp;毛泽东思想和中国特色社会主义理论体系概论1-12周,16周[41]</div>       <div class="mtt_item_room">毛泽东思想和中国特色社会主义理论体系概论1-12周,16周,星期1,5-6节,主楼A-204,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="2" data-begin-unit="5" data-end-unit="6" rowspan="2"><div class="mtt_arrange_item " style="background-color:#DDE4FE">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】PHYS281609&nbsp;大学物理II-21-16周[01]</div>       <div class="mtt_item_room">大学物理II-21-16周,星期2,5-6节,中2-3219,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="3" data-begin-unit="5" data-end-unit="6" rowspan="2" class="highLight"></td><td data-role="item" data-week="4" data-begin-unit="5" data-end-unit="6" rowspan="2"><div class="mtt_arrange_item " style="background-color:#D8DCF0">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】PHED109250&nbsp;体育-31-16周[54]</div>       <div class="mtt_item_room">体育-31-16周,星期4,5-6节,东南运动场-东南足球场（1）,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="5" data-begin-unit="5" data-end-unit="6" rowspan="2"><div class="mtt_arrange_item " style="background-color:#D3EAFD">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】COMP250205&nbsp;计算机程序设计1-16周[01][自修]</div>       <div class="mtt_item_room">计算机程序设计1-16周,星期5,5-6节,主楼A-103,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="6" data-begin-unit="5" data-end-unit="6" rowspan="2"></td><td data-role="item" data-week="7" data-begin-unit="5" data-end-unit="6" rowspan="2"></td></tr> <tr>  <td class="mtt_bgcolor_grey" data-unit="6">6</td></tr> <tr>  <td class="mtt_bgcolor_grey" data-unit="7">7</td><td data-role="item" data-week="1" data-begin-unit="7" data-end-unit="8" rowspan="2"><div class="mtt_arrange_item " style="background-color:#D3F4F8">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】ELEC321104&nbsp;电路1-16周[06]</div>       <div class="mtt_item_room">电路1-16周,星期1,7-8节,东2-410,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="2" data-begin-unit="7" data-end-unit="8" rowspan="2"><div class="mtt_arrange_item " style="background-color:#FCE0EA">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】MATH201607&nbsp;数学物理方程9-16周[04]</div>       <div class="mtt_item_room">数学物理方程9-16周,星期2,7-8节,主楼B-403,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="3" data-begin-unit="7" data-end-unit="8" rowspan="2" class="highLight"></td><td data-role="item" data-week="4" data-begin-unit="7" data-end-unit="8" rowspan="2"></td><td data-role="item" data-week="5" data-begin-unit="7" data-end-unit="8" rowspan="2"><div class="mtt_arrange_item mtt_tzkc" style="background-color:undefined">       <div class="mtt_item_tzkcicon">           <img src="../public/images/u422.png">       </div>       <div class="mtt_item_kcmc">【本】MATH200327&nbsp;概率统计与随机过程1-16周[01]</div>       <div class="mtt_item_room">概率统计与随机过程1-16周,星期5,7-8节,主楼C-205,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="6" data-begin-unit="7" data-end-unit="8" rowspan="2"></td><td data-role="item" data-week="7" data-begin-unit="7" data-end-unit="8" rowspan="2"></td></tr> <tr>  <td class="mtt_bgcolor_grey" data-unit="8">8</td></tr> <tr><td class="mtt_bgcolor_grey" rowspan="3">晚上</td>  <td class="mtt_bgcolor_grey" data-unit="9">9</td><td data-role="item" data-week="1" data-begin-unit="9" data-end-unit="10" rowspan="2"><div class="mtt_arrange_item " style="background-color:#D3EAFD">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】COMP250205&nbsp;计算机程序设计1-16周[01][自修]</div>       <div class="mtt_item_room">计算机程序设计1-16周,星期1,9-10节,主楼A-103,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="2" data-begin-unit="9" data-end-unit="10" rowspan="2"></td><td data-role="item" data-week="3" data-begin-unit="9" data-end-unit="10" rowspan="2" class="highLight"><div class="mtt_arrange_item mtt_tzkc" style="background-color:undefined">       <div class="mtt_item_tzkcicon">           <img src="../public/images/u422.png">       </div>       <div class="mtt_item_kcmc">【本】MATH200327&nbsp;概率统计与随机过程1-16周[01]</div>       <div class="mtt_item_room">概率统计与随机过程1-16周,星期3,9-10节,主楼C-205,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="4" data-begin-unit="9" data-end-unit="10" rowspan="2"><div class="mtt_arrange_item " style="background-color:#DDE4FE">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】PHYS281609&nbsp;大学物理II-24周,8周,12周,16周[01]</div>       <div class="mtt_item_room">大学物理II-24周,8周,12周,16周,星期4,9-10节,无,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="5" data-begin-unit="9" data-end-unit="10" rowspan="2"><div class="mtt_arrange_item " style="background-color:#FCE0EA">       <div class="mtt_item_tzkcicon">       </div>       <div class="mtt_item_kcmc">【本】MATH201607&nbsp;数学物理方程9-16周[04]</div>       <div class="mtt_item_room">数学物理方程9-16周,星期5,9-10节,主楼B-403,<br><span class="" style="">兴庆校区</span></div>   </div></td><td data-role="item" data-week="6" data-begin-unit="9" data-end-unit="10" rowspan="2"></td><td data-role="item" data-week="7" data-begin-unit="9" data-end-unit="10" rowspan="2"></td></tr> <tr>  <td class="mtt_bgcolor_grey" data-unit="10">10</td></tr> <tr>  <td class="mtt_bgcolor_grey" data-unit="11">11</td><td data-role="item" data-week="1" data-begin-unit="11" data-end-unit="11"></td><td data-role="item" data-week="2" data-begin-unit="11" data-end-unit="11"></td><td data-role="item" data-week="3" data-begin-unit="11" data-end-unit="11" class="highLight"></td><td data-role="item" data-week="4" data-begin-unit="11" data-end-unit="11"></td><td data-role="item" data-week="5" data-begin-unit="11" data-end-unit="11"></td><td data-role="item" data-week="6" data-begin-unit="11" data-end-unit="11"></td><td data-role="item" data-week="7" data-begin-unit="11" data-end-unit="11"></td></tr>      </tbody></table>  </div></div>
+                </div>
+            </div>
+            <div id="wptk_contaner" class="bh-l-inline " style="width:250px;vertical-align:top; ">    <div class="bh-mb-16 ">
+         <div class="bh-col-md-12 bh-form-groupname sc-title-borderLeft bh-mb-16 " title="其他课程 "><a class="bh-color-grey " href="javascript:void(0); ">其他课程</a>
+     		<div><span style="color:RED;font-size:12px">备注：此处显示的是上课时间暂未确定、不安排具体时间或者线上学习的课程</span></div>
+    	 </div>
+        <div style="height:245px;overflow:auto;">
+            	<div class="kbck-card-unset bh-ph-16 bh-pv-16 " style="color:#bbb;">
+             	暂无数据
+            	</div>
+        </div>
+    </div>
+    <div class="bh-mv-16 ">
+        <div class="bh-col-md-12 bh-form-groupname sc-title-borderLeft bh-mb-16 " title="调课信息 "><a class="bh-color-grey " href="javascript:void(0); ">调课信息</a></div>
+        <div style="height:245px;overflow:auto;">
+            <div class="kbck-card-adjust ">
+                 <div class="kbck-card-unset bh-ph-16 bh-pv-16 " style="border:solid 1px #bbb; ">
+                 	<div><span class="bh-l-inline ">概率统计与随机过程</span><span class="bh-l-inline bh-color-caption bh-ph-16 kbck-card-content ">MATH200327</span></div>
+                    	<div><span class="bh-l-inline ">调课信息</span><span class="bh-l-inline bh-color-caption bh-ph-16 kbck-card-content ">从1周星期5的7-8节调整为1周星期5的9-10节,主楼C-105</span></div>
+                    	
+                    	
+                	<div><span class="bh-l-inline ">上课教师</span><span class="bh-l-inline bh-color-caption bh-ph-16 kbck-card-content ">刘美琴/0002012035,吕红强/JZB2015031变更为/0002012035,JZB2015031</span></div>
+                
+                 </div>
+                 <div class="kbck-card-unset bh-ph-16 bh-pv-16 " style="border:solid 1px #bbb; ">
+                 	<div><span class="bh-l-inline ">概率统计与随机过程</span><span class="bh-l-inline bh-color-caption bh-ph-16 kbck-card-content ">MATH200327</span></div>
+                    	<div><span class="bh-l-inline ">调课信息</span><span class="bh-l-inline bh-color-caption bh-ph-16 kbck-card-content ">从2-8周星期5的7-8节调整为2-8周星期5的9-10节,主楼C-205</span></div>
+                    	
+                    	
+                	<div><span class="bh-l-inline ">上课教师</span><span class="bh-l-inline bh-color-caption bh-ph-16 kbck-card-content ">刘美琴/0002012035,吕红强/JZB2015031变更为/0002012035,JZB2015031</span></div>
+                
+                 </div>
+            </div>
+        </div>
+        <a href="#" id="zttk_zc">查看整体调课</a>
+    </div>
+</div>
+        </div>
+    </section>
+</article>
+</main><footer bh-footer-role="footer" class="bh-footer"><div class="bh-footer-content">版权信息：© 2016 西安交通大学&amp;金智教育  苏ICP备10204514号</div></footer>
+
+
+
+  <div class="app-ajax-loading jqx-widget jqx-loader jqx-rc-all jqx-fill-state-normal jqx-rc-t jqx-rc-b jqx-popup" style="position: fixed; z-index: 30000; background-color: rgba(0, 0, 0, 0); width: 300px; height: 60px; display: none;" id="jqxWidget6a07cd68"><div class="bh-loader-icon-line  bh-loader-icon-line-border"><i></i><i></i><i></i><i></i><i></i></div></div><div class="app-loading"><div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div></div><div id="bh-eventWindow"></div><div class="bh-headerBar-roleBox bh-card bh-card-lv3 bh-headerBar-popupBox-animate" bh-header-role="roleBox"><div class="bh-headerBar-roleBox-explain bh-headerBar-roleBox-title">选择角色</div><div class="bh-headerBar-roleBox-title"><a id="20150808183545465" href="javascript:void(0);">学生组</a></div></div><div class="bh-headerBar-userIfon bh-headerBar-popupBox-animate bh-card bh-card-lv3" bh-header-role="bhHeaderBarInfoBox"><div class="bh-headerBar-userInfo-img"><img src="http://res.xjtu.edu.cn/images/user.png"></div><div class="bh-headerBar-userInfo-detail"></div></div><div bh-header-more-guid="494b020f-15d7-9ab2-16a3-09b0a93a08c7" class="bh-header-navMoreBox" bh-header-role="navMoreBox" style="height: 0px;"><div class="bh-header-navMoreBox-bar bh-animate-fast bh-animate-top"></div></div></body></html>
