@@ -6,12 +6,16 @@ import sqlite3
 
 def main():
     # 目标网址
-    baseurl = "http://org.xjtu.edu.cn/openplatform/login.html"
+    baseurl = "http://ehall.xjtu.edu.cn/jwapp/sys/wdkb/*default/index.do?amp_sec_version_=1&gid_=S3dzUjIyZ1lnbzdra0gwMk1BaWwwUkpQUHp1VlY3MHRiWDNpRW9FeU9qb2tSUDhKbStqUVlxZllYR2YxU1doRmFTdlpnVWhWUWxRamtieUxvZE1rZEE9PQ&EMAP_LANG=zh&THEME=millennium#/xskcb"
+    # baseurl = "http://org.xjtu.edu.cn/openplatform/login.html" # 测试登录
     # 测试网址
     # baseurl = "http://httpbin.org/post"
     # 测试
     # response = askUrl(baseurl)
-    getData(baseurl)
+    # datalist = getData(baseurl)
+    # print(datalist[0])
+    response = getData(baseurl)
+    print(response)
     '''
     try:
         print(response.read().decode('utf-8'))
@@ -41,19 +45,23 @@ def askUrl(baseurl):
         return response
     '''
     # post模式
-    response = ""
+    # response = urllib.request.urlopen("https://httpbin.org")
     try:
         headers = {
-            "Cookie" : "route=d80842f3ed8a3dae69abb1007cb767eb; cur_appId_=GRt5IN2Ni3M=; state=xjdCas; JSESSIONID=884BE73D86A7E91A43D7A666B3D7F332; sid_code=workbench_login_jcaptcha_884BE73D86A7E91A43D7A666B3D7F332; open_Platform_User=user_token_bf106336-0175-46bc-94a1-7d16639a9938; memberId=840404; usertypekey=1; employeenokey=2203612988",
+            "Cookie": "route=4e1029b6d2fd71bcfc9aea3454a71763; cur_appId_=GRt5IN2Ni3M=; state=xjdCas; JSESSIONID=0827108EAD8C1D3FA24FA7C345160A9A; sid_code=workbench_login_jcaptcha_0827108EAD8C1D3FA24FA7C345160A9A",
             "User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36 Edg/93.0.961.47",
-            "name" : "2203612988",
-            "password" : "2203612988"
+        }
+        data = {
+            "loginType": 1,
+            "username": "2203612988",
+            "pwd": "bnfM91jhtYx0oY+vtFnmJw==",
+            "jcaptchaCode": ""
         }
         # data = bytes(urllib.parse.urlencode({'name' : 'user_name'}), encoding="utf-8")
-        req = urllib.request.Request(url=baseurl, headers=headers, method="POST")
+        req = urllib.request.Request(url=baseurl, headers=headers, data=data, method="POST")
         response = urllib.request.urlopen(req)
         # 打印返回页面
-        # print(response.read().decode("utf-8"))
+        print(response.read().decode("utf-8"))
     except Exception as result:
         if hasattr(result, "code"):
             print("错误代码：", result.code, sep="")
@@ -73,9 +81,9 @@ def getData(baseurl):
     # for i in range(0, MAX)
     # 循环体
     response = askUrl(baseurl)
-    html = response.read().decode("utf-8")
-    datalist.append(html)
-    return datalist
+    html = response.read().decode('utf-8')
+    # datalist.append(html)
+    return html
 
 
 
