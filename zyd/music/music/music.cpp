@@ -1,9 +1,11 @@
 // 播放  生日快乐
 
 #include <windows.h>
+using namespace std;
 
-void main(void)
 
+
+int main()
 {
 
     unsigned FREQUENCY[] = { 392,392,440,392,523,494,
