@@ -1,4 +1,4 @@
-    #include <stdlib.h>
+#include <stdlib.h>
 #include<stdio.h>
 
 //定义一个字符栈
