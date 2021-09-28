@@ -3,22 +3,21 @@
 
 typedef char Datatype;
 
-typedef sturct stack
+typedef struct stack
 {
     int top;
     int bottom;
     Datatype *stackArray;
-}
-Stack;
+} Stack;
 
 //申明栈的函数
 Stack *CreateStack(int length);         //创建一个新的栈
 void ClearStack(Stack *stack);          //清空栈
 void DestroyStack(Stack *stack);        //销毁栈
-DataType Pop(Stack *stack);             //弹栈
-void Push(Stack *stack, DataType data); //压栈
+Datatype Pop(Stack *stack);             //弹栈
+void Push(Stack *stack, Datatype data); //压栈
 int GetLength(Stack *stack);            //得到栈的大小
-DataType GetSatckPeek(Stack *stack);    //取得栈顶元素
+Datatype GetSatckPeek(Stack *stack);    //取得栈顶元素
 
 int main()
 {
@@ -28,11 +27,11 @@ int main()
 
 Stack *CreateStack(int length)
 {
-    Stack *stack = (stack *)malloc(sizeof(Stack));
+    Stack *stack = (Stack*)malloc(sizeof(Stack));
     if (stack)
     {
-        Stack->stackArray = (Datatype *)malloc(sizeof(Datatype));
-        if (Stack->stackArray == NULL)
+        stack->stackArray = (Datatype *)malloc(sizeof(Datatype));
+        if (stack->stackArray == NULL)
         {
             return NULL;
             stack->bottom = 0;
@@ -54,7 +53,7 @@ void DestoryStack(Stack *stack)
     free(stack);
 }
 
-Datetpye Pop(Stack *stack)
+Datatype Pop(Stack *stack)
 {
     if (stack->top > stack->bottom)
     {
@@ -68,15 +67,15 @@ Datetpye Pop(Stack *stack)
 
 void push(Stack *stack, Datatype Data)
 {
-    Stack->stackArray[Stack->top++] = Data;
+    stack->stackArray[stack->top++] = Data;
 }
 
 int Getlenth(Stack *stack)
 {
-    return Stack->top - Stack->bottom;
+    return stack->top - stack->bottom;
 }
 
 Datatype GetSatckPeek(Stack *stack)
 {
-    return Stack->top > Stack->bottom ? Stack->stackArray[Stack->top - 1] : 0;
+    return stack->top > stack->bottom ? stack->stackArray[stack->top - 1] : 0;
 }
