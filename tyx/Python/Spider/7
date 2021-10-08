@@ -1,0 +1,41 @@
+名称：index.html?browser=no
+常规：
+    请求 URL: http://ehall.xjtu.edu.cn/new/index.html?browser=no
+    请求方法: GET
+    状态代码: 200 OK (从磁盘缓存)
+    远程地址: 202.117.18.3:80
+    引用站点策略: strict-origin-when-cross-origin
+响应头：
+    Connection: keep-alive
+    Content-Language: zh-CN
+    Date: Fri, 08 Oct 2021 06:50:10 GMT
+    Location: http://ehall.xjtu.edu.cn/new/index.html?browser=no
+    Server: openresty
+    Set-Cookie: asessionid=51760832-1930-41da-9ba9-8a908e8e8f47; path=/
+    Transfer-Encoding: chunked
+    x-frame-options: SAMEORIGIN
+    X-Frame-Options: SAMEORIGIN
+请求头：
+    Referer: http://org.xjtu.edu.cn/openplatform/login.html
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36 Edg/94.0.992.38
+参数：
+    browser: no
+源：响应头
+    HTTP/1.1 302 Moved Temporarily
+    Server: openresty
+    Date: Fri, 08 Oct 2021 06:50:10 GMT
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Location: http://ehall.xjtu.edu.cn/new/index.html?browser=no
+    Content-Language: zh-CN
+    Set-Cookie: asessionid=51760832-1930-41da-9ba9-8a908e8e8f47; path=/
+    x-frame-options: SAMEORIGIN
+    X-Frame-Options: SAMEORIGIN
+源：请求头
+    GET /new/index.html?browser=no HTTP/1.1
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36 Edg/94.0.992.38
+    Referer: http://org.xjtu.edu.cn/openplatform/login.html
+源：参数
+    browser=no

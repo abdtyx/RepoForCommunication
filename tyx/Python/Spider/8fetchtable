@@ -1,0 +1,50 @@
+名称：sendRecUseApp.json?appId=4770397878132218&_=1633675880480
+常规：
+    请求 URL: http://ehall.xjtu.edu.cn/jsonp/sendRecUseApp.json?appId=4770397878132218&_=1633675880480
+    请求方法: GET
+    状态代码: 200 OK
+    远程地址: 202.117.18.3:80
+    引用站点策略: strict-origin-when-cross-origin
+响应头：
+    Connection: keep-alive
+    Content-Type: application/json;charset=UTF-8
+    Date: Fri, 08 Oct 2021 07:24:11 GMT
+    Server: openresty
+    Transfer-Encoding: chunked
+    x-frame-options: SAMEORIGIN
+    X-Frame-Options: SAMEORIGIN
+请求头：
+    Accept: application/json, text/javascript, */*; q=0.01
+    Accept-Encoding: gzip, deflate
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+    Connection: keep-alive
+    Cookie: route=ab22dc972e174017d573ee90262bcc96; route=8b9256afce303b2bfefa79284f0e767c; CASTGC=jom9wXclI+OIi8NE1VKZvyO1q1u6lfhKfHPdLQEsGhrgbgq+AoBhCQ==; MOD_AMP_AUTH=MOD_AMP_8ee09709-444c-41e9-b21f-97c2b3236a14; asessionid=51760832-1930-41da-9ba9-8a908e8e8f47; amp.locale=undefined; JSESSIONID=0dReybC2UKfA705YucVPXCXVC674Y9AbO_xhr1dsPn2C4ebdw3jD!1060874889
+    Host: ehall.xjtu.edu.cn
+    Referer: http://ehall.xjtu.edu.cn/new/index.html?browser=no
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36 Edg/94.0.992.38
+    X-Requested-With: XMLHttpRequest
+参数：
+    appId: 4770397878132218
+    _: 1633675880480
+源：响应头
+    HTTP/1.1 200 OK
+    Server: openresty
+    Date: Fri, 08 Oct 2021 07:24:11 GMT
+    Content-Type: application/json;charset=UTF-8
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    x-frame-options: SAMEORIGIN
+    X-Frame-Options: SAMEORIGIN
+源：请求头
+    GET /jsonp/sendRecUseApp.json?appId=4770397878132218&_=1633675880480 HTTP/1.1
+    Host: ehall.xjtu.edu.cn
+    Connection: keep-alive
+    Accept: application/json, text/javascript, */*; q=0.01
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36 Edg/94.0.992.38
+    X-Requested-With: XMLHttpRequest
+    Referer: http://ehall.xjtu.edu.cn/new/index.html?browser=no
+    Accept-Encoding: gzip, deflate
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+    Cookie: route=ab22dc972e174017d573ee90262bcc96; route=8b9256afce303b2bfefa79284f0e767c; CASTGC=jom9wXclI+OIi8NE1VKZvyO1q1u6lfhKfHPdLQEsGhrgbgq+AoBhCQ==; MOD_AMP_AUTH=MOD_AMP_8ee09709-444c-41e9-b21f-97c2b3236a14; asessionid=51760832-1930-41da-9ba9-8a908e8e8f47; amp.locale=undefined; JSESSIONID=0dReybC2UKfA705YucVPXCXVC674Y9AbO_xhr1dsPn2C4ebdw3jD!1060874889
+源：参数
+    appId=4770397878132218&_=1633675880480

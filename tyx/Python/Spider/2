@@ -1,0 +1,54 @@
+名称：getUserIdentity?memberId=840404&_=1633675879653
+常规：
+    请求 URL: http://org.xjtu.edu.cn/openplatform/g/admin/getUserIdentity?memberId=840404&_=1633675879653
+    请求方法: GET
+    状态代码: 200 
+    远程地址: 202.117.18.202:80
+    引用站点策略: strict-origin-when-cross-origin
+响应头：
+    Access-Control-Allow-Headers: x-requested-with, content-type, accept, origin, X-Toon-User-ID, X-Toon-User-Token, X-Toon-User-Agent,sessionId
+    Access-Control-Allow-Methods: POST, GET,OPTIONS
+    Access-Control-Allow-Origin: *
+    Access-Control-Max-Age: 3600
+    Connection: keep-alive
+    Content-Type: application/json;charset=UTF-8
+    Date: Fri, 08 Oct 2021 06:50:10 GMT
+    Server: nginx
+    Transfer-Encoding: chunked
+请求头：
+    Accept: */*
+    Accept-Encoding: gzip, deflate
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+    Connection: keep-alive
+    Content-Type: application/json;charset=utf-8
+    Cookie: route=9be7941a82615cb9f408e8256a3df9d4; cur_appId_=GRt5IN2Ni3M=; state=xjdCas; JSESSIONID=B3E021272BC632DA216363410FA0AD8F; sid_code=workbench_login_jcaptcha_B3E021272BC632DA216363410FA0AD8F; memberId=840404; usertypekey=1; employeenokey=2203612988; open_Platform_User=user_token_b056ee5c-451a-4ba1-9e7a-341fb94a2304
+    Host: org.xjtu.edu.cn
+    Referer: http://org.xjtu.edu.cn/openplatform/login.html
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36 Edg/94.0.992.38
+参数：
+    memberId: 840404
+    _: 1633675879653
+源：响应头
+    HTTP/1.1 200
+    Server: nginx
+    Date: Fri, 08 Oct 2021 06:50:10 GMT
+    Content-Type: application/json;charset=UTF-8
+    Transfer-Encoding: chunked
+    Connection: keep-alive
+    Access-Control-Allow-Origin: *
+    Access-Control-Allow-Methods: POST, GET,OPTIONS
+    Access-Control-Max-Age: 3600
+    Access-Control-Allow-Headers: x-requested-with, content-type, accept, origin, X-Toon-User-ID, X-Toon-User-Token, X-Toon-User-Agent,sessionId
+源：请求头
+    GET /openplatform/g/admin/getUserIdentity?memberId=840404&_=1633675879653 HTTP/1.1
+    Host: org.xjtu.edu.cn
+    Connection: keep-alive
+    Accept: */*
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36 Edg/94.0.992.38
+    Content-Type: application/json;charset=utf-8
+    Referer: http://org.xjtu.edu.cn/openplatform/login.html
+    Accept-Encoding: gzip, deflate
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+    Cookie: route=9be7941a82615cb9f408e8256a3df9d4; cur_appId_=GRt5IN2Ni3M=; state=xjdCas; JSESSIONID=B3E021272BC632DA216363410FA0AD8F; sid_code=workbench_login_jcaptcha_B3E021272BC632DA216363410FA0AD8F; memberId=840404; usertypekey=1; employeenokey=2203612988; open_Platform_User=user_token_b056ee5c-451a-4ba1-9e7a-341fb94a2304
+源：参数
+    memberId=840404&_=1633675879653

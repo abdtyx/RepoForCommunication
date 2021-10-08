@@ -1,0 +1,52 @@
+名称：login?service=http://ehall.xjtu.edu.cn/new/index.h…er=no&ticket=8ee09709-444c-41e9-b21f-97c2b3236a14
+常规：
+    请求 URL: http://ehall.xjtu.edu.cn/login?service=http://ehall.xjtu.edu.cn/new/index.html?browser=no&ticket=8ee09709-444c-41e9-b21f-97c2b3236a14
+    请求方法: GET
+    状态代码: 302 Moved Temporarily
+    远程地址: 202.117.18.3:80
+    引用站点策略: strict-origin-when-cross-origin
+响应头：
+    Connection: keep-alive
+    Content-Length: 154
+    Content-Type: text/html
+    Date: Fri, 08 Oct 2021 06:50:10 GMT
+    Location: http://ehall.xjtu.edu.cn/login?service=http://ehall.xjtu.edu.cn/new/index.html?browser=no
+    Server: openresty
+    Set-Cookie: MOD_AMP_AUTH=MOD_AMP_8ee09709-444c-41e9-b21f-97c2b3236a14; path=/; Httponly
+    X-Frame-Options: SAMEORIGIN
+请求头：
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    Accept-Encoding: gzip, deflate
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+    Connection: keep-alive
+    Cookie: JSESSIONID=pIReqCR9SA1ekn7juc4i0IzZ8IXH8rlpxt3BVya_ZR94ZVtiJYRf!1060874889; route=8b9256afce303b2bfefa79284f0e767c; amp.locale=undefined; CASTGC=jom9wXclI+OIi8NE1VKZvyO1q1u6lfhKfHPdLQEsGhrgbgq+AoBhCQ==
+    Host: ehall.xjtu.edu.cn
+    Referer: http://org.xjtu.edu.cn/
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36 Edg/94.0.992.38
+参数：
+    service: http://ehall.xjtu.edu.cn/new/index.html?browser=no
+    ticket: 8ee09709-444c-41e9-b21f-97c2b3236a14
+源：响应头
+    HTTP/1.1 302 Moved Temporarily
+    Server: openresty
+    Date: Fri, 08 Oct 2021 06:50:10 GMT
+    Content-Type: text/html
+    Content-Length: 154
+    Connection: keep-alive
+    Set-Cookie: MOD_AMP_AUTH=MOD_AMP_8ee09709-444c-41e9-b21f-97c2b3236a14; path=/; Httponly
+    Location: http://ehall.xjtu.edu.cn/login?service=http://ehall.xjtu.edu.cn/new/index.html?browser=no
+    X-Frame-Options: SAMEORIGIN
+源：请求头
+    GET /login?service=http://ehall.xjtu.edu.cn/new/index.html?browser=no&ticket=8ee09709-444c-41e9-b21f-97c2b3236a14 HTTP/1.1
+    Host: ehall.xjtu.edu.cn
+    Connection: keep-alive
+    Upgrade-Insecure-Requests: 1
+    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36 Edg/94.0.992.38
+    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+    Referer: http://org.xjtu.edu.cn/
+    Accept-Encoding: gzip, deflate
+    Accept-Language: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6
+    Cookie: JSESSIONID=pIReqCR9SA1ekn7juc4i0IzZ8IXH8rlpxt3BVya_ZR94ZVtiJYRf!1060874889; route=8b9256afce303b2bfefa79284f0e767c; amp.locale=undefined; CASTGC=jom9wXclI+OIi8NE1VKZvyO1q1u6lfhKfHPdLQEsGhrgbgq+AoBhCQ==
+源：参数
+    service=http://ehall.xjtu.edu.cn/new/index.html?browser=no&ticket=8ee09709-444c-41e9-b21f-97c2b3236a14
