@@ -48,3 +48,7 @@ __I'm a magic vegetabledog. If you touch fish, I'll turn you into a vegetabledog
 7. 买域名  
 8. 内网穿透：`frp Server`  
 9. 正式上线  
+
+
+__## 事件8：电路实验*Multisim*__
+时间：第五周之内搞定，因为第六周周三ddl![vegetabledog](https://github.com/abdtyx/RepoForCommunication/blob/dev/vegetabledog.png)
