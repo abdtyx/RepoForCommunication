@@ -50,5 +50,5 @@ __I'm a magic vegetabledog. If you touch fish, I'll turn you into a vegetabledog
 9. 正式上线  
 
 
-__## 事件8：电路实验*Multisim*__
+## 事件8：电路实验*Multisim*
 时间：第五周之内搞定，因为第六周周三ddl![vegetabledog](https://github.com/abdtyx/RepoForCommunication/blob/dev/vegetabledog.png)
