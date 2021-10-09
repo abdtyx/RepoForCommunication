@@ -1,3 +1,5 @@
+# MASCOT
+![vegetabledog](https://github.com/abdtyx/RepoForCommunication/blob/dev/vegetabledog.png)
 # Event
 ## 事件1：搜集竞赛信息
 时间：长期  
