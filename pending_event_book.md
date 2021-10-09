@@ -1,5 +1,7 @@
 # MASCOT
 ![vegetabledog](https://github.com/abdtyx/RepoForCommunication/blob/dev/vegetabledog.png)
+## Introduction
+__I'm a magic vegetabledog. If you touch fish, I'll turn you into a vegetabledog!__
 # Event
 ## 事件1：搜集竞赛信息
 时间：长期  
