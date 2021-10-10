@@ -6,7 +6,7 @@ __I'm a magic vegetabledog. If you touch fish, I'll turn you into a vegetabledog
 ## 事件1：搜集竞赛信息
 时间：长期  
 ### 网址
-1. [xjtu教务处](dean.xjtu.edu.cn)  
+1. [xjtu教务处](http://dean.xjtu.edu.cn)  
 
 拓展：用爬虫软件爬取信息。  
 要求：实时爬取，并且上传(QQ，github)  
