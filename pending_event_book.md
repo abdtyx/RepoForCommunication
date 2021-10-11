@@ -53,8 +53,9 @@ __I'm a magic vegetabledog. If you touch fish, I'll turn you into a vegetabledog
 ## 事件8：电路实验*Multisim*
 时间：第五周之内搞定，因为第六周周三ddl![vegetabledog](https://github.com/abdtyx/RepoForCommunication/blob/dev/vegetabledog.png)
 **第五周之内搞定？？？你看看我们的组长白嫖，还没开始就结束了** 
-[vegetabledog](https://github.com/abdtyx/RepoForCommunication/blob/dev/vegetabledog.png)
+[big_smile](https://github.com/abdtyx/RepoForCommunication/blob/dev/big_smile.jpg)
 
 ## *事件9：做一个自己的网站* 
 ~~口误~~  
-**这是本人的建议，其他人看看就行**[vegetabledog](https://github.com/abdtyx/RepoForCommunication/blob/dev/vegetabledog.png)
+**这是本人的建议，其他人看看就行** 
+[big_smile](https://github.com/abdtyx/RepoForCommunication/blob/dev/big_smile.jpg)
