@@ -58,5 +58,5 @@ __I'm a magic vegetabledog. If you touch fish, I'll turn you into a vegetabledog
 
 ## *事件9：做一个自己的网站* 
 ~~口误~~  
-**这是本人的建议，其他人看看就行**  
+**这是本人的建议，其他人看看就行** 
 ![big_smile](https://github.com/abdtyx/RepoForCommunication/blob/dev/big_smile.jpg)
