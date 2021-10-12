@@ -1,10 +1,10 @@
 # coding=utf-8
-from DayTableInfoAPI.DayTableInfoAPI import DayTableInfo
+from API.DayTableInfoAPI import GetDayTable
 
 
 
 def main():
-    text = DayTableInfo()
+    text = GetDayTable()
     print(text)
     '''
     对接Bot_Azure
