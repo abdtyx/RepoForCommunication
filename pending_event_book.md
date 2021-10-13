@@ -12,17 +12,14 @@ __I'm a magic vegetabledog. If you touch fish, I'll turn you into a vegetabledog
 拓展：用爬虫软件爬取信息。  
 要求：实时爬取，并且上传(QQ，github)  
 
-
 ## 事件2：提高编程水平（各种语言都可以）
 时间：长期  
 1. 学习计算机网络相关知识
 2. 可以写**网络爬虫**来训练自己
 
-
 ## 事件3：面向物联网的科技竞赛专题开放实验
 时间：_Current--Sep.30th_  
  
-
 ## 事件4：c++项目
 时间：_No specific time._  
 

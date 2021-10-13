@@ -1,0 +1,126 @@
+* {
+    -webkit-box-sizing: border-box;
+    /* 设置盒模型为内减模式 */
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "microsoft yahei", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, p, form, input, button, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+input, textarea, select {
+    outline: none;
+    -webkit-appearance: none;
+}
+
+/* 清除IOS下按钮原生样式 */
+
+textarea {
+    resize: none;
+}
+
+/* 不允许调整元素宽高 */
+
+table {
+    border-collapse: collapse;
+}
+
+/* 为表格设置合并边框模型 */
+
+input, select, textarea {
+    outline: none;
+    border: none;
+    background: none;
+}
+
+/* 清除默认样式 */
+
+a {
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    color: #232323;
+    line-height: 0;
+}
+
+em, i, b {
+    font-style: normal;
+}
+
+li, ol {
+    list-style: none;
+}
+
+body {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+img {
+    border: none;
+    width: 100%;
+    vertical-align: top;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.clearfix:after {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    content: ".";
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/* 修改plachholder颜色 */
+
+input::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #8f8f8f;
+}
+
+input:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #8f8f8f;
+}
+
+input::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #8f8f8f;
+}
+
+input:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #8f8f8f;
+}
+
+body {
+    font-family: "微软雅黑";
+}
