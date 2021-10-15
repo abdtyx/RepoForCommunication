@@ -1,0 +1,494 @@
+.organizational{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    position:relative;
+    /* display: none; */
+  }
+  .isMObil {
+    display: none;
+  }
+  .login-wrap .bigBg {
+    width:100%;
+    height:100%;
+    position:absolute
+  }
+  input, textarea {color: #000;}
+  .placeholder {color: #aaa;}
+  /*----------------------------头部信息展示--------------------------------*/
+  .header{width:100%;height:60px;position: absolute;left:0px;top:0px;z-index:10;background:#003b90}
+  .header_content{
+    width: 899px;
+    height: 60px;
+    line-height: 60px;
+    font-family: PingFangSC-Medium;
+    font-size: 18px;
+    color: #fff;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+    .header_content .img_1 {
+      position: absolute;
+      left: 0;
+    }
+    .header_content .img_1 img{
+      width: 123px;
+      height: 36px;
+      margin-right: 10px;
+    }
+    .header_content .span{
+      float: right;
+      font-size: 12px;
+      cursor: pointer;
+      display: block
+    }
+    .header_content .span .img_3{
+      width: 14px;
+      height: 14px;
+      float: left;
+      margin-right: 0;
+      margin-top: 23px;
+    }
+    .header_content .div_img{
+      width:80px;
+      height:95px;
+      background:#fff;
+      position:absolute;
+      right:10px;
+      top:50px;
+      -moz-border-radius: 5px; /* Firefox */
+      -webkit-border-radius: 5px; /* Safari 和 Chrome http://www.manongjc.com/article/1214.html */
+      border-radius: 5px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+      z-index:1000;
+      display: none
+    }
+    .header_content .img_2{
+      width:70px;
+      height:70px;
+      display:block;
+      margin:auto;
+      margin-top:5px;
+      position: relative;
+    }
+    .header_content p{
+      width:80px;
+      height:15px;
+      line-height:15px;
+      font-size: 10px;
+      color:#ccc;
+      text-align:center;
+      margin-top:4px;
+    }
+  
+    /*------------------------------------主体内容展示------------------------------*/
+    .main{
+      width: 899px;
+      height:420px;
+      position: absolute;
+      top:100px;
+      left:50%;
+      margin-left:-449px;
+      text-align: center;
+    }
+    .main .miniBg {
+      width:652px;
+      height:320px;
+      position: absolute;
+      top: 50px;
+      left: -100px;
+    }
+  
+    .main .form{
+      padding: 10px 16px 0;
+      box-sizing: border-box;
+      clear: both
+    }
+    .main .main_info .form input{
+      height: 41px!important;
+      font-size: 12px;
+      display: inline-block;
+      width: 103%;
+      outline: 0;
+      line-height:41px!important;
+      -moz-border-radius: 4px; /* Firefox */
+      -webkit-border-radius: 4px; /* Safari 和 Chrome http://www.manongjc.com/article/1214.html */
+      border-radius: 4px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+      border: 1px solid #dcdfe6;
+      margin-bottom:20px;
+      padding-left:8px;
+  
+    }
+   .main .main_info .form .text_yan{
+      width: 60%;
+      float: left;
+      height:40px;
+    }
+    .main .form .img_span{
+      width:35%;
+      float: right;
+      text-align: center;
+      line-height:41px;
+      display: block;
+      -moz-border-radius: 4px; /* Firefox */
+      -webkit-border-radius: 4px; /* Safari 和 Chrome http://www.manongjc.com/article/1214.html */
+      border-radius: 4px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+      border: 1px solid #dcdfe6;
+      font-size:12px;
+      height:41px;
+      cursor: pointer;
+  
+    }
+    .main .new {
+      clear: both;
+      padding: 0px 20px 0;
+      box-sizing: border-box;
+    }
+    .main .login_btn{
+      clear: both;
+      margin: 25px 20px 30px 20px;
+      box-sizing: border-box;
+      background: #003b90!important;
+      border: 1px solid #003b90!important;
+      cursor: pointer;
+      color:#fff;
+      -moz-border-radius: 3px; /* Firefox */
+      -webkit-border-radius: 3px; /* Safari 和 Chrome http://www.manongjc.com/article/1214.html */
+      border-radius: 3px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+      height:35px;
+      line-height:35px;
+      font-size:14px;
+    }
+    .main .new .newAdd{
+      float: left;
+      color: #ac2834!important;
+      cursor: pointer;
+      opacity: .4;
+      font-size:12px;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+    .main .new .forget{
+      float: right;
+      color: #ac2834!important;
+      cursor: pointer;
+      opacity: .4;
+      font-size:12px;
+      text-align: end;
+      margin-bottom: 10px;
+    }
+    .login-mian-title {
+      font-size: 12px;
+      color: #000000;
+      text-align: left;
+      padding-left: 23px;
+      padding-right: 23px;
+      box-sizing: border-box;
+      /* display: none */
+    }
+    .login-mian-title span{
+      /* float: left; */
+      font-size: 12px;
+      color: #000000;}
+    .login-mian-title .teach{
+        color: #AC2834;
+        /* float: left; */
+      }
+    .swiper-container{
+      width: 665px;
+      height: 400px;
+      position: absolute;
+      top: -3px;
+      left: -100px;
+    }
+    /*------------------------------主体内容信息呈现样式-------------------------------*/
+    .main_info,.main_info_send{
+      width: 298px;
+      background: #fff;
+      border: 1px solid #fff;
+      box-shadow: 0 2px 4px 0 rgba(0,0,0,.19);
+      -moz-border-radius: 5px; /* Firefox */
+      -webkit-border-radius: 5px; /* Safari 和 Chrome http://www.manongjc.com/article/1214.html */
+      border-radius: 5px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+      position: absolute;
+      top:0px;
+      right: 0;
+    }
+    .main_info{
+      display:block
+    }
+    .main_info_send{
+      display:none
+    }
+    .main_info .h3,.main_info_send .h3{
+      font-size: 15px;
+      color: #000;
+      text-align: center;
+      line-height: 20px;
+      padding-top: 27px;
+      padding-bottom: 20px;
+    }
+  
+    .main .sendInfo {
+      font-size: 12px;
+      color: #000;
+      padding: 8px 0 10px;
+      cursor: pointer;
+      border-top: 1px solid #dcdfe6;
+      clear: both
+    }
+  .loginSwich{
+      height: 30px;
+      width: 30px;
+      position: absolute;
+      right: 7px;
+      top: 5px;
+      cursor: pointer;
+  }
+  .qrCode{
+      display: none;
+  }
+  .qrCode h3{
+      font-size: 15px;
+      color: #000;
+      text-align: center;
+      line-height: 20px;
+      padding-top: 27px;
+      /* border-bottom: 1px solid #b5abab; */
+  }
+  .qrCode .qrcode_p{
+      color: #000;
+      text-align: center;
+      line-height: 20px;
+      padding: 0 0 20px 0;
+      font-size: 12px;
+  }
+  /*扫码登录二维码*/
+  .qrCodeWrap{
+      margin: 0px auto;
+      width:140px;
+      height:140px;
+      position: relative;
+  }
+  .qrCodeWrap .erweima{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  /*扫码成功*/
+  .qrCodeWrap .sweep-success{
+    width:140px;
+    height:140px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background: rgba(0,0,0,0.5);
+    display: none;
+  }
+  .qrCodeWrap .sweep-success img{
+    width: 26px;
+    height: 26px;
+    margin-top:45px;
+  }
+  .qrCodeWrap .sweep-success p{
+    width: 100%;
+    font-size: 12px;
+    color: #FFFFFF;
+    margin-top: 10px;
+  }
+    /*二维码已过期*/
+  .qrCodeWrap .refresh-code{
+    width:140px;
+    height:140px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background: rgba(0,0,0,0.5);
+    display: none;
+  }
+  .qrCodeWrap .refresh-code img{
+    width: 26px;
+    height: 26px;
+    margin-top:38px;
+  }
+  .qrCodeWrap .refresh-code p{
+    width: 100%;
+    font-size: 12px;
+    color: #FFFFFF;
+  }
+  .qrCodeWrap .refresh-code .timeout-code{
+    margin-top: 12px;
+  }
+  .downloadApp{
+    width:100%;height:50px;background: #FAFAFA;border-radius: 0 0 5px 5px;
+    border-radius: 0px 0px 5px 5px;text-align: center;line-height:50px;font-size: 12px;color: #AC2834;cursor:pointer
+  }
+    /*--------------------------------短信验证码登录样式展示-----------------------------*/
+    .main .main_info_send .form .phone,.main .main_info_send .form .VerificationCode{
+      height: 41px!important;
+      font-size: 13px;
+      display: inline-block;
+      width: 100%;
+      outline: 0;
+      line-height:41px!important;
+      -moz-border-radius: 4px; /* Firefox */
+      -webkit-border-radius: 4px; /* Safari 和 Chrome http://www.manongjc.com/article/1214.html */
+      border-radius: 4px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+      border: 1px solid #dcdfe6;
+      margin-bottom:20px;
+    }
+    .main .main_info_send .form .phone span{
+      font-size:12px;
+      color: #000;
+      width:18%;
+      text-align:center;
+      line-height:41px;
+      float: left;
+      display: block
+    }
+    .main .main_info_send .form .phone input{
+      width:82%;
+      height:41px;
+      line-height:41px;
+      float: left;
+      font-size:12px;
+    }
+    .main .main_info_send .form .VerificationCode input {
+      width:60%;
+      height:41px;
+      line-height:41px;
+      float: left;
+      padding-left:15px;
+      font-size:12px;
+    }
+    .main .main_info_send .form .VerificationCode span{
+      width:34%;
+      height:41px;
+      line-height:41px;
+      float: left;
+      font-size:12px;
+      cursor: pointer;
+      color:#606266;
+      display: block
+    }
+    .codeBox {
+      display: none;
+    }
+    /*--------------------------------------页脚内容展示-----------------------------------------*/
+    .footer{
+      width:100%;
+      position: absolute;
+      bottom: 0;
+      z-index:10;
+      font-size: 12px;
+      color: #000;
+      padding: 15px 0;
+      line-height: 18px;
+      text-align: center;
+    }
+    .footer span {
+      padding-left: 10px;
+    }
+    /*-------------------------------------页面的错误信息展示---------------------------*/
+    .span_username{font-size:12px;color:#f56c6c;margin-top:5px;margin-bottom:5px;display:none;text-align: left}
+    .main .main_info .form .input_username{margin-bottom:0px;border:1px solid #f56c6c}
+    .span_password{font-size:12px;color:#f56c6c;margin-top:5px;margin-bottom:5px;display:none;text-align: left;}
+    .main .main_info .form .input_password{margin-bottom:0px;border:1px solid #f56c6c}
+    .span_img{font-size:12px;color:#f56c6c;margin-top:5px;margin-bottom:5px;display:none;text-align: left;clear: both;padding-top:5px;}
+    .main .main_info .form .input_img{margin-bottom:0px;border:1px solid #f56c6c}
+    .phoneVal_span{font-size:12px;color:#f56c6c;margin-top:5px;margin-bottom:5px;display:none;float: left;}
+    .code_span{font-size:12px;color:#f56c6c;margin-top:5px;margin-bottom:5px;display:none;float: left;}
+    .main .main_info_send .form .phoneVal_input,.main .main_info_send .form .code_input{margin-bottom:0px;border:1px solid #f56c6c}
+  
+  
+    /*----------------------------新用户认证弹出框样式-------------------------------------*/
+    .mark{width:100%;height:100%;background:#000;position:fixed;left:0px;top:0px;z-index:100;
+      filter:alpha(opacity=30);
+      -moz-opacity:0.3;
+      -khtml-opacity: 0.3;
+      opacity: 0.3;
+      display:none;
+      cursor: pointer;
+  }
+    .new_pop, .van-dialog1,.van-dialog2{width:30%;height:480px;background:#fff;position:fixed;left:50%;top:50%;margin-left:-15%;margin-top:-220px;z-index:108;
+      display:none;
+      box-shadow: 1px 0px 14px 2px #c7c3c3;
+      -moz-border-radius:3px; /* Firefox */
+      -webkit-border-radius:3px; /* Safari 和 Chrome http://www.manongjc.com/article/1214.html */
+      border-radius:3px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+     }
+     .van-dialog1,.van-dialog2{
+       width: 420px;
+       height: 130px;
+       padding-bottom: 10px;
+       overflow: hidden;
+       margin-top: -65px;
+     }
+     .old_pass_tip {
+       font-size: 14px;
+       color: #606266;
+       width:90%;
+       /* height:60px; */
+       padding: 0 21px;
+       
+     }
+     .old_pass_tip a{
+       color:#003b90!important
+     }
+     .passTip_btn,.passTip2_btn {
+      background: #003b90!important;
+      border: 1px solid #003b90!important;
+      height: 36px;
+      -moz-border-radius: 2px; /* Firefox */
+      -webkit-border-radius: 2px; /* Safari 和 Chrome http://www.manongjc.com/article/1214.html */
+      border-radius: 2px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+      cursor: pointer;
+      font-size:14px;
+      color:#fff;
+      width:80px;
+      text-align: center;
+      line-height:36px;
+      float: right;
+      margin-right: 15px;
+      margin-top:8px;
+     }
+    .new_h3_title{width:90%;height:60px;margin:auto;}
+    .title_left{width:80%;height:60px;float: left;font-size:18px;color:#303133;line-height:60px;}
+    .title_right{width:20%;height:60px;float: left;font-size:24px;color:#909399;line-height:60px;text-align: right;font-weight: normal; cursor: pointer;}
+    .new_info{width:100%;text-align:center;font-size:14px;color:#606266;margin-top:20px;font-weight:400}
+    .new_infos{width:84%;margin:0 auto;text-align:center;font-size:14px;color:#606266;font-weight:400}
+    .new_info_1{width:100%;text-align:center;color: #606266;font-size:12px;margin-bottom:10px;}
+    .new_info_2{text-align: center;color:#E74A4A;text-decoration:underline;padding-top:10px; cursor: pointer;font-size:14px;}
+    .new_info_btn{
+      background: #003b90!important;
+      border: 1px solid #003b90!important;
+      height: 36px;
+      -moz-border-radius: 2px; /* Firefox */
+      -webkit-border-radius: 2px; /* Safari 和 Chrome http://www.manongjc.com/article/1214.html */
+      border-radius: 2px; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+      cursor: pointer;
+      font-size:14px;
+      color:#fff;
+      width:80px;
+      margin:auto;
+      text-align: center;
+      line-height:36px;
+      margin-top:10px;
+    }
+  
+    /*----------------------------------------二维码展示信息----------------------------*/
+    .new_query{
+      width:150px;height:150px;margin:30px auto;position: relative
+    }
+    #qrCodeIco{
+      width:54px;height:54px;position: absolute;left:50%;margin-left:-27px;top:50%;margin-top:-27px;
+    }
+    #qrCodeIcoimg{
+      width:20px;height:20px;position: absolute;left:50%;margin-left:-10px;top:50%;margin-top:-10px;
+    }
+    .van-dialog2{
+      height:185px;
+    }
+  
