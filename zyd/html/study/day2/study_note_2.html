@@ -23,17 +23,33 @@
             <li>C/C++</li>
             <li>C#</li>
             <li>html/css</li>
+            <li>arduino(emmm)</li>
         </ol>
     </div>
     <div title="表单域">
-        <form>
-            用户: <input type="text" /> <br />
-            密码: <input type="password" /> <br />
-            性别: 男<input type="radio"> 女 <input type="radio"> ？<input type="radio"> <br />
-            爱好: 吃饭 <input type="checkbox"> 睡觉 <input type="checkbox"> 白嫖 <input type="checkbox"> 打游戏 <input type="checkbox"> <br />
+        <form name="表单域" action="xxx.php" method="get">
+            用户: <input type="text" name="username"/> <br />
+            密码: <input type="password" name="pwd" /> <br />
+            <!--br /-->
+            性别: <label for="man">男</label> <input type="radio" name="sex" id="man"> <label for="woman">女</label> <input type="radio" name="sex" id="woman"> <label for="?">？</label> <input type="radio" name="sex" checked="checked" id="?"> <br />
+            爱好: 吃饭 <input type="checkbox" > 睡觉 <input type="checkbox"> 白嫖 <input type="checkbox" checked="checked"> 打游戏 <input type="checkbox"> <br />
+            星际争霸2的打法：
+            <select>
+                <option selected="selected">请选择</option>
+                <option>偷</option>
+                <option>稳</option>
+                <option>狗</option>
+                <option>奶</option>
+            </select> <br />
+            <input type="submit" value="提交"/> 
+            <input type="reset" /> 
+            <input type="button" value="变鸡术" ><br />
+            <input type="file" value="添加文件">
         </form>
     </div>
-
+    <div title="反馈">
+        <textarea rows="5" cols="50">不会吧，真的有人写吧</textarea> <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fnimg.ws.126.net%2F%3Furl%3Dhttp%253A%252F%252Fdingyue.ws.126.net%252F2021%252F1003%252Fdc17d751j00r0d2ky001qc000fu00flc.jpg%26thumbnail%3D650x2147483647%26quality%3D80%26type%3Djpg&refer=http%3A%2F%2Fnimg.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1636894848&t=d25980f3a011ef9186e8c61eda849133" width="100">
+    </div>
 </body>
 
 </html>
