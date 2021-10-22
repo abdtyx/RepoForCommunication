@@ -2,12 +2,14 @@
 import urllib.request
 import urllib.parse
 
+from API.DayTableInfoAPI import GetDayTable
+
 # bot域名
 url = "http://127.0.0.1:5700"
 
 # 卡中文解法：urllib.parse.quote("中文")
 # msg = "我是一个bot"
-msg = urllib.parse.quote("Azure在这一天学会了中文")
+msg = urllib.parse.quote(GetDayTable().strip('\n'))
 
 # 群组消息API调用
 group_msg = url + "/send_group_msg?group_id=913813594&message=" + msg
