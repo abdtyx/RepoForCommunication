@@ -1,5 +1,5 @@
 #include <bits/stdc++.h>
-#include <regex>
+// #include <regex>
 
 
 using namespace std;
@@ -20,38 +20,56 @@ int main() {
     }
     string teachers_action[2] = {" came!", " left!"};
     string students_action[2] = {" started playing games!", " stopped playing games!"};
+    // 吞字符问题
     char abandon;
     cin >> abandon;
     for (int i = 0; i < n; i++) {
         string tmp;
         // cin >> tmp;
         getline(cin, tmp);
+        // char str[200];
+        // scanf("%[^\n]%*c", str);
+        // string tmp(str);
         bool teacher_flag = false;
         //处理老师在线情况
         for (int j = 0; j < 3; j++) {
             //在线
-            regex r(teachers[j].first + teachers_action[0]);
-            if (regex_match(tmp, r))
+            // regex r(teachers[j].first + teachers_action[0]);
+            string r = teachers[j].first + teachers_action[0];
+            if (/*regex_match(tmp, r)*/ r == tmp)
                 teachers[j].second = true;
             //离线
-            regex r2(teachers[j].first + teachers_action[1]);
-            if (regex_match(tmp, r2))
+            // regex r2(teachers[j].first + teachers_action[1]);
+            string r2 = teachers[j].first + teachers_action[1];
+            if (/*regex_match(tmp, r2)*/ r2 == tmp)
                 teachers[j].second = false;
             //老师抓人
+            // if (teachers[j].second)
+                // teacher_flag = true;
+        }
+        //老师抓人
+        for (int j = 0; j < 3; j++) {
             if (teachers[j].second)
                 teacher_flag = true;
         }
         //处理学生在线情况
         for (int j = 0; j < 5; j++) {
             //在线
-            regex r(students[j].first + students_action[0]);
-            if (regex_match(tmp, r))
+            // regex r(students[j].first + students_action[0]);
+            string r = students[j].first + students_action[0];
+            if (/*regex_match(tmp, r)*/ r == tmp)
                 students[j].second = true;
             //离线
-            regex r2(students[j].first + students_action[1]);
-            if (regex_match(tmp, r2))
+            // regex r2(students[j].first + students_action[1]);
+            string r2 = students[j].first + students_action[1];
+            if (/*regex_match(tmp, r2)*/ r2 == tmp)
                 students[j].second = false;
             //寄了
+            // if (students[j].second && teacher_flag)
+                // flag[j] = true;
+        }
+        // 寄了
+        for (int j = 0; j < 5; j++) {
             if (students[j].second && teacher_flag)
                 flag[j] = true;
         }
