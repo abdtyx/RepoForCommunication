@@ -3,8 +3,7 @@
 using namespace std;
 
 int main() {
-    char str[81];
-    scanf("%[^\n]", str);
-    string s(str);
-    cout << s;
+    int a, b, c, d, e, f, g, h, i;
+    cin >> a >> b >> c >> d >> e >> f >> g >> h >> i;
+    cout << a << b << c << d << e << f << g << h << i;
 }

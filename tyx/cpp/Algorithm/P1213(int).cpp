@@ -7,7 +7,7 @@
 */
 
 typedef struct _Clock {
-    char a, b, c, d, e, f, g, h, i;
+    int a, b, c, d, e, f, g, h, i;
 } Clock;
 
 Clock fun1(Clock ab);
@@ -26,19 +26,16 @@ using namespace std;
 
 int main() {
     Clock clk;
-    int a0, b0, c0, d0, e0, f0, g0, h0, i0;
-    cin >> a0 >> b0 >> c0 >> d0 >> e0 >> f0 >> g0 >> h0 >> i0;
-    // cin >> clk.a >> clk.b >> clk.c >> clk.d >> clk.e >> clk.f >> clk.g >> clk.h >> clk.i;
-    // clk.a = ((clk.a - '0') / 3) & 3; clk.b = ((clk.b - '0') / 3) & 3; clk.c = ((clk.c - '0') / 3) & 3; clk.d = ((clk.d - '0') / 3) & 3; clk.e = ((clk.e - '0') / 3) & 3; clk.f = ((clk.f - '0') / 3) & 3; clk.g = ((clk.g - '0') / 3) & 3; clk.h = ((clk.h - '0') / 3) & 3; clk.i = ((clk.i - '0') / 3) & 3;
-    clk.a = (a0 / 3) & 3; clk.b = (b0 / 3) & 3; clk.c = (c0 / 3) & 3; clk.d = (d0 / 3) & 3; clk.e = (e0 / 3) & 3; clk.f = (f0 / 3) & 3; clk.g = (g0 / 3) & 3; clk.h = (h0 / 3) & 3; clk.i = (i0 / 3) & 3;
+    cin >> clk.a >> clk.b >> clk.c >> clk.d >> clk.e >> clk.f >> clk.g >> clk.h >> clk.i;
+    clk.a = (clk.a / 3) & 3; clk.b = (clk.b / 3) & 3; clk.c = (clk.c / 3) & 3; clk.d = (clk.d / 3) & 3; clk.e = (clk.e / 3) & 3; clk.f = (clk.f / 3) & 3; clk.g = (clk.g / 3) & 3; clk.h = (clk.h / 3) & 3; clk.i = (clk.i / 3) & 3;
     if (solved(clk)) {
         return 0;
     }
-    pair<Clock, queue<char>> ans, tmp;
+    pair<Clock, queue<int>> ans, tmp;
     ans.first = clk;
-    queue<pair<Clock, queue<char> > > bfs;
+    queue<pair<Clock, queue<int> > > bfs;
     // bfs入队
-    for (char i = 1; i <= 9; i++) {
+    for (int i = 1; i <= 9; i++) {
         if (!ans.second.empty()) {
             ans.second.pop();
             ans.second.push(i);
@@ -52,7 +49,7 @@ int main() {
         tmp = bfs.front();
         bfs.pop();
         // solve
-        char method = tmp.second.back();
+        int method = tmp.second.back();
         switch (method) {
         case 1:
             tmp.first = fun1(tmp.first);
@@ -88,8 +85,8 @@ int main() {
         if (solved(tmp.first))
             break;
         // 向下bfs一层
-        for (char i = 1; i <= 9; i++) {
-            queue<char> deliver = tmp.second;
+        for (int i = 1; i <= 9; i++) {
+            queue<int> deliver = tmp.second;
             /*
             if (i == 1) {
                 tmp.second.push(i);
@@ -103,16 +100,16 @@ int main() {
            bfs.push(make_pair(tmp.first, deliver));
         }
     }
-    queue<char> answer = tmp.second;
-    char ctr = 0;
+    queue<int> answer = tmp.second;
+    int ctr = 0;
     while (!answer.empty()) {
         if (ctr == 0) {
-            cout << (int)answer.front();
+            cout << answer.front();
             answer.pop();
             ctr++;
         }
         else {
-            cout << " " << (int)answer.front();
+            cout << " " << answer.front();
             answer.pop();
         }
     }
