@@ -28,11 +28,16 @@ int main() {
     }
     for (int tot = 0, mask = (1 << m); tot < mask; tot++) {
         int select = 0; // select用来记录取了几个人，只对取了n个人的情况进行计算
+        // 冲突回溯flag
+        bool flag = true;   // 必须遍历完所有情况时这个解满足题目条件，flag才会为true
         // 真值表
         bool truth[25];
+        pair<int, int> is_guilty[25];   // pari<guilty, not_guilty> 
         // initialize
         for (int z = 0; z < 25; z++) {
             truth[z] = false;
+            is_guilty[z].first = 0;
+            is_guilty[z].second = 0;
             person[z].second = false;
         }
         for (int i = 0; i < m; i++) {
@@ -58,11 +63,55 @@ int main() {
                     }
                     if (truth[person_number]) {
                         // 判定冲突回溯
-                        person[person_number]
+                        if (is_guilty[person_number].second != 0) {
+                            // 已经是not_guilty，但是又guilty
+                            flag = false;
+                            break;
+                        }
+                        else {
+                            is_guilty[person_number].first++;
+                        }
+                    }
+                    else {
+                        // 他说的是假话，所以得反着来，那他就not guilty
+                        // 判定冲突回溯
+                        if (is_guilty[person_number].first != 0) {
+                            flag = false;
+                            break;
+                        }
+                        else
+                            is_guilty[person_number].second++;
                     }
                 }
                 // I am not guilty.
+                if (sentence[j].second == "I am not guilty.") {
+                    // find person number
+                    string tmp = sentence[j].first;
+                    int person_number = 1;
+                    for (; person_number < 25; person_number++) {
+                        if (person[person_number].first == tmp)
+                            break;
+                    }
+                    if (truth[person_number]) {
+                        if (is_guilty[person_number].first != 0) {
+                            flag = false;
+                            break;
+                        }
+                        else
+                            is_guilty[person_number].second++;
+                    }
+                    else {
+                        if (is_guilty[person_number].second != 0) {
+                            flag = false;
+                            break;
+                        }
+                        else
+                            is_guilty[person_number].first++;
+                    }
+                }
                 // XXX is guilty
+                // find person number
+                string temp = 
                 // XXX is not guilty.
             }
         }
