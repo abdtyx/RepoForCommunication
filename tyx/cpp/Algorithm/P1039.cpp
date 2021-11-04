@@ -111,7 +111,9 @@ int main() {
                 }
                 // XXX is guilty
                 // find person number
-                string temp = 
+                for (int person_number = 1; person_number < 25; person_number++) {
+                    if (person[person_number].first + " is guilty." == )
+                }
                 // XXX is not guilty.
             }
         }
