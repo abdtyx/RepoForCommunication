@@ -1,17 +1,26 @@
-#include <bits/stdc++.h>
+
+#include <iostream>
 
 using namespace std;
 
-#define s 14561564654516321546103515
+struct free_throws
+{
+std::string name;
+int made;
+int attempts;
+float percent;
+};
 
-int main() {
-    int ans = 1;
-    for (int i = 0; i < 1e7; i++) {
-        ans = (ans * 2) % 1000000;
-        if (ans == 69376) {
-            cout << i;
-            break;
-        }
-    }
-    return 0;
+const free_throws & clone(free_throws & ft)
+{
+free_throws * pt;
+*pt = ft; // copy info
+return *pt; // return reference to copy
+}
+
+int main()
+{
+   free_throws ft;
+   clone(ft);
+   return 0;
 }
