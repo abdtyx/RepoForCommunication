@@ -8,21 +8,27 @@ int main() {
     // 显然可能出现证词互相冲突的情况，不妨用bool数组存人，对证词检验时根据数组中bool值的情况判断是否冲突，若冲突，回溯。
     int m, n, p;
     cin >> m >> n >> p;
+    // string st;
+    // getline(cin, st);
     pair<string, bool> person[25];  // pair<name, guilty>
     // int person_length = 0;
     pair<string, string> sentence[105];  // pair<name, evidence>
-    vector<string> ans;
+    // vector<string> ans;
+    set<string> ans;
     ans.clear();
     regex r("(.*): (.*)");
     smatch _m;
     for (int i = 0; i < m; i++) {
         string tmp;
         cin >> tmp;
+        // getline(cin, tmp);
         person[i + 1].first = tmp;
         person[i + 1].second = false;
     }
-    char abandon;
-    cin >> abandon;
+    // char abandon;
+    string stt;
+    // cin >> abandon;
+    getline(cin, stt);
     for (int i = 0; i < p; i++) {
         string reg;
         // cin >> reg;
@@ -191,8 +197,12 @@ int main() {
                     if (is_guilty[k].first)
                         possible.push_back(person[k].first);
                 }
-                if (possible.size() == 1)
-                    ans.push_back(possible[0]);
+                if (possible.size() == 1) {
+                    // ans.insert(possible[0]);
+                    if (ans.find(possible[0]) == ans.end()) {
+                        ans.insert(possible[0]);
+                    }
+                }
             }
         }
     }
@@ -201,5 +211,6 @@ int main() {
     else if (ans.size() == 0)
         cout << "Impossible";
     else
-        cout << ans[0];
+        cout << *ans.begin();
+    return 0;
 }
