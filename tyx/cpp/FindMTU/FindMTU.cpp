@@ -4,7 +4,7 @@
 // 默认找202.117.0.20
 
 // Error code
-// 65500: 表示本机具有将已拆分的数据包合成并验证回复的能力或者MTU大于65500，后者可能性极小。
+// 65500: 表示按MTU拆分的数据包被合并从而作出响应或者MTU大于65500，后者可能性极小。
 
 #include <bits/stdc++.h>
 
@@ -43,6 +43,7 @@ int main() {
                         if (ans == right) {
                             if (ans == 65500) {
                                 printf("Cannot find the MTU from here to target ip. \nError: 65500.");
+                                return 0;
                             }
                             printf("The MTU from here to target ip is: %d", ans);
                             return 0;
