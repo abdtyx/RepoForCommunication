@@ -10,7 +10,7 @@ int main() {
     FILE* fp = NULL;
     char* cmd = new char[512];
     // system("echo hello");
-    sprintf(cmd, "ping -l 65500 202.117.0.20");
+    sprintf(cmd, "ping -l 1472 -f 202.117.0.20");
     if ((fp = popen(cmd, "r")) != NULL) {
         while (1) {
             if (fgets(cmd, 100, fp) != NULL) {
