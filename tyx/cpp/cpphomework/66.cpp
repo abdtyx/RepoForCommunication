@@ -5,6 +5,7 @@ using namespace std;
 class Cd
 {
 private:
+    friend class Classic;
     char performers[50];
     char label[20];
     int selections;
@@ -17,47 +18,7 @@ public:
     ~Cd();
     virtual void Report() const;
     Cd &operator=(const Cd &d);
-    const char* performers();
-    const char* label();
-    const int selections();
-    const double playtime();
-    void c_performers(const char* s);
-    void c_label(const char* s);
-    void c_selections(const int i);
-    void c_playtime(const double d);
 };
-
-void Cd::c_performers(const char* s) {
-	strcpy(performers, s);
-}
-
-void Cd::c_label(const char* s) {
-	strcpy(label, s);
-}
-
-void Cd::c_selections(const int i) {
-	selections = i;
-}
-
-void Cd::c_playtime(const double d) {
-	playtime = d;
-}
-
-const char* Cd::performers() {
-	return performers;
-}
-
-const char* Cd::label() {
-	return label;
-}
-
-const int Cd::selections() {
-	return selections;
-}
-
-const double playtime() {
-	return playtime;
-}
 
 Cd::Cd(const char* s1, const char *s2, int n, double x) {
 	strcpy(performers, s1);
@@ -99,7 +60,7 @@ void Cd::Report() const {
 	cout << performers << ',' << label << ',' << selections << ',' << playtime << endl;
 }
 
-class Classic : public Cd {
+class Classic: public Cd {
 	private:
 		char primary_work[50];
 	public:
@@ -113,50 +74,42 @@ class Classic : public Cd {
 
 Classic::Classic(const char* s1, const char* s2, const char* s3, int n, double x){
 	strcpy(primary_work, s1);
-	// strcpy(performers, s2);
-	c_performers(s2);
-        // strcpy(label, s3);
-	c_label(s3);
-        // selections = n;
-	c_selections(n);
-        // playtime = x;
-	c_playtime(x);
+	strcpy(performers, s2);
+        strcpy(label, s3);
+        selections = n;
+        playtime = x;
 }
 
 Classic::Classic(const Classic& c) {
-        strcpy(primary_work, c.primary_work());
-	c_performers(c.performers());
-	c_label(c.label());
-	c_selections(c.selections());
-	c_playtime(c.playtime());
+	strcpy(primary_work, c.primary_work);
+        strcpy(performers, c.performers);
+	strcpy(label, c.label);
+        selections = c.selections;
+        playtime = c.playtime;
 }
 
 Classic::Classic() {
 	primary_work[0] = 0;
-//	performers[0] = 0;
-//	label[0] = 0;
-//	selections = 0;
-//	playtime = 0;
-	c_performers("\0");
-	c_label("\0");
-	c_selections(0);
-	c_playtime(0);
+	performers[0] = 0;
+	label[0] = 0;
+	selections = 0;
+	playtime = 0;
 }
 
 Classic::~Classic() {
         primary_work[0] = 0;
-	c_performers("\0");
-        c_label("\0");
-        c_selections(0);
-        c_playtime(0);
+        performers[0] = 0;
+        label[0] = 0;
+        selections = 0;
+        playtime = 0;
 }
 
 Classic& Classic::operator=(const Classic& c) {
-        strcpy(primary_work, c.primary_work());
-        c_performers(c.performers());
-        c_label(c.label());
-        c_selections(c.selections());
-        c_playtime(c.playtime());
+        strcpy(primary_work, c.primary_work);
+        strcpy(performers, c.performers);
+        strcpy(label, c.label);
+        selections = c.selections;
+        playtime = c.playtime;
 	return *this;
 }
 
