@@ -12,7 +12,7 @@ class Sample {
 		Sample();
 		void Insert(int i);
 		void output();
-}
+};
 
 class Process {
 	public:
@@ -57,7 +57,8 @@ int main() {
 		cin >> temp;
 		a.Insert(temp);
 	}
-	Process.sort(a);
+	Process p;
+	p.sort(a);
 	a.output();
 	return 0;
 }
