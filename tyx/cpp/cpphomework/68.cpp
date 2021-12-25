@@ -1,4 +1,5 @@
 #include <iostream>
+#include <valarray>
 
 using namespace std;
 
@@ -64,14 +65,14 @@ Wine::Wine(const char* l, int y) {
 }
 
 void Wine::GetBottles() {
-	int arr1 = new int[number_of_years];
-	int arr2 = new int[number_of_years];
+	int* arr1 = new int[number_of_years];
+	int* arr2 = new int[number_of_years];
 	// int ctr = 0;
 	cout << "Enter " << label << " data for " << number_of_years << " year(s): " << endl;
 	for (int i = 0; i < number_of_years; i++) {
-		cout << "Enter year: ";
+		cout << "Enter year:\n";
 		cin >> arr1[i];
-		cout << "Enter the bottles for that year: ";
+		cout << "Enter bottles for that year:\n";
 		cin >> arr2[i];
 	}
 	ArrayInt a1(arr1, number_of_years);
@@ -95,18 +96,18 @@ void Wine::Show() {
 	string fill8 = "        ";
 	string fill4 = "    ";
 	cout << "Wine: " << label << endl;
-	cout << fill8 << "Years" << fill4 << "Bottles" << endl;
+	cout << fill8 << "Year" << fill4 << "Bottles" << endl;
 	for (int i = 0; i < number_of_years; i++) {
-		cout >> fill8 << p.first[i] << fill4 << p.second[i] << endl;
+		cout << fill8 << p.first[i] << fill4 << p.second[i] << endl;
 	}
 	return;
 }
 
 int main( void ) {
-	cout << "Enter name of Wine: ";
+	cout << "Enter name of wine:\n";
 	char lab[50];
 	cin.getline(lab, 50);
-	cout << "Enter number of years: ";
+	cout << "Enter number of years:\n";
 	int yrs;
 	cin >> yrs;
 
