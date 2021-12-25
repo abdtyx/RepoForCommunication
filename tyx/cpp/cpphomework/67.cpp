@@ -121,9 +121,9 @@ Classic::~Classic() {
         // primary_work[0] = 0;
 	delete [] primary_work;
         // performers[0] = 0;
-	delete [] performers;
+	// delete [] performers;
         // label[0] = 0;
-	delete [] label;
+	// delete [] label;
         selections = 0;
         playtime = 0;
 }
@@ -136,7 +136,7 @@ Classic& Classic::operator=(const Classic& c) {
 	performers = new char[strlen(c.performers)];
         strcpy(performers, c.performers);
 	delete [] label;
-	label = new char[strlen(label)];
+	label = new char[strlen(c.label)];
         strcpy(label, c.label);
         selections = c.selections;
         playtime = c.playtime;
