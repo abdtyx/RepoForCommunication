@@ -8,18 +8,21 @@ import requests
 from Login.Login import LoginEhall
 from Handle.HandleWeekTable import Handle
 
-path = r'D:\RepoForCommunication\tyx\Python\Timetable\\'
+# path = r'D:\RepoForCommunication\tyx\Python\Timetable\\'
+path = '.\\'
 
-
+'''
 # 计算时间
 # 暂时不知道如何获取当前周
 # start是学期开始日，必须手动改
+# 已解决
 start = int(256)
 f = open(path + 'time.txt', 'r')
 dt = f.readlines()
 tm_wk =  str(int(1) + int((int(dt[1]) - start + int(1)) / int(7))) # 周
 xnxqdm = "2021-2022-1" # 学年学期
 f.close()
+'''
 
 def Table(userinfo, s):
     LoginTimes = 0
@@ -31,6 +34,9 @@ def Table(userinfo, s):
     r = s.post("http://ehall.xjtu.edu.cn/jwapp/sys/wdkb/modules/jshkcb/dqxnxq.do")
     data = json.loads(r.text)
     xnxqdm = data['datas']['dqxnxq']['rows'][0]['DM']
+    r = s.post("http://ehall.xjtu.edu.cn/jwapp/sys/wdkb/modules/xskcb/cxxsjbxx.do")
+    data = json.loads(r.text)
+    tm_wk = data['datas']['cxxsjbxx']['rows'][0]['XSLBDM']
     r = s.post("http://ehall.xjtu.edu.cn/jwapp/sys/wdkb/modules/xskcb/xskcb.do?XNXQDM=" + str(xnxqdm) + "&SKZC=" + str(tm_wk), allow_redirects=False)
     while (r.status_code != 200):
         s = LoginEhall(userinfo, s)
