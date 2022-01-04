@@ -1,15 +1,17 @@
-#include <bits/stdc++.h>
-#include <regex>
+#include <stdio.h>
+#include <stdlib.h>
 
-using namespace std;
+void mlc();
 
 int main() {
-    // // regex r("^Reply from 202.117.0.20.*\n$");
-    // string s = "Reply from 202.117.0.20: bytes=1472 time=8ms TTL=60\n";
-    // bool b = regex_match(s, r);
-    // cout << b;
-    int res = system("getSystem 123");
-    if (res == 1) puts("Windows");
-    else puts("Linux");
+    mlc();
+    system("pause");
     return 0;
+}
+
+void mlc() {
+    int ctr = 0;
+    while(ctr++ < 1000000)
+        int* tmp = (int*)malloc(4 * 1000);
+        // int* tmp = new int[1000];
 }
