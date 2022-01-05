@@ -2,7 +2,8 @@
 
 import re
 
-path = r'D:\RepoForCommunication\tyx\Python\Timetable\\'
+# path = r'D:\RepoForCommunication\tyx\Python\Timetable\\'
+path = '.\\'
 dayTableList = [[],[],[],[],[],[],[]]
 def Handle(wk_table):
     cnt = 0

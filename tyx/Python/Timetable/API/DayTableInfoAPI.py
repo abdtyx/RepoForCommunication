@@ -3,12 +3,15 @@
 # from os import read
 import time
 import requests
+import json
 from Login.Login import LoginEhall
 from Get.GetTable import Table
 from Get.GetChangeInfo import Change
 from Handle.SplitDayTable import Split
+from Crypto.Crypto import crypates
 
-path = r'D:\RepoForCommunication\tyx\Python\Timetable\\'
+# path = r'D:\RepoForCommunication\tyx\Python\Timetable\\'
+path = '.\\'
 
 # 该API不需要任何参数，返回日课表（列表类型）
 
@@ -33,7 +36,7 @@ def GetDayTable():
             print("第一次登录，请使用新账号")
             new_user_flag = 1
             userinfo["netid"] = int(input("请输入新的账号："))
-            userinfo["password"] = input("请输入ehall加密的密码：")
+            userinfo["password"] = input("请输入密码：")
             # userinfo["memberId"] = input("请输入新的memberId：")
             with open(path + 'userinfo.txt', 'w') as changeuserinfo:
                 changeuserinfo.writelines(str(userinfo["netid"]) + '\n')
@@ -42,7 +45,7 @@ def GetDayTable():
     else:
         new_user_flag = 1
         userinfo["netid"] = input("请输入新的账号：")
-        userinfo["password"] = input("请输入ehall加密的密码：")
+        userinfo["password"] = input("请输入密码：")
         # userinfo["memberId"] = input("请输入新的memberId：")
         with open(path + 'userinfo.txt', 'w') as changeuserinfo:
             changeuserinfo.writelines(userinfo["netid"] + '\n')
@@ -52,6 +55,10 @@ def GetDayTable():
     #     "netid" : netid,
     #     "password" : password
     # }
+
+    # 前端加密API
+    userinfo['password'] = crypates(userinfo['password'])
+
     # Login模块处理登录ehall
     s = requests.Session()
     # 获得LoginEhall返回的保持在线的cookies，用该cookies访问课表html
