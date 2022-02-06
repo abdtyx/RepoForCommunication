@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "*.html": "html",
+        "iostream": "cpp",
+        "xstring": "cpp",
+        "functional": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp",
+        "valarray": "cpp",
+        "ostream": "cpp",
+        "random": "cpp",
+        "iomanip": "cpp",
+        "xutility": "cpp",
+        "string": "cpp"
+    }
+}

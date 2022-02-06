@@ -4,14 +4,41 @@
 using namespace std;
 
 typedef valarray<int> ArrayInt;
-typedef pair<ArrayInt, ArrayInt> PairArray;
+// typedef pair<ArrayInt, ArrayInt> PairArray;
 
-class Wine {
+class PairArray {
+	private:
+		ArrayInt first;
+		ArrayInt second;
+	public:
+		void mod_first(ArrayInt a);
+		void mod_second(ArrayInt a);
+		ArrayInt& pfirst();
+		ArrayInt& psecond();
+};
+
+void PairArray::mod_first(ArrayInt a) {
+	first = a;
+}
+
+void PairArray::mod_second(ArrayInt a) {
+	second = a;
+}
+
+ArrayInt& PairArray::pfirst() {
+	return first;
+}
+
+ArrayInt& PairArray::psecond() {
+	return second;
+}
+
+class Wine : private PairArray {
 	private:
 		// char label[50];
 		string label;
 		int number_of_years;
-		PairArray p;
+		// PairArray p;
 	public:
 		Wine();
 		~Wine();
@@ -39,7 +66,30 @@ class Wine {
 		 * @brief show data
 		 */
 		void Show();
+
+		// void modi_first(ArrayInt a);
+		// void modi_second(ArrayInt a);
+		// ArrayInt& gfirst();
+		// ArrayInt& gsecond();
 };
+
+/*
+void Wine::modi_first(ArrayInt a) {
+	mod_first(a);
+}
+
+void Wine::modi_second(ArrayInt a) {
+	mod_second(a);
+}
+
+ArrayInt& Wine::gfirst() {
+	return pfirst();
+}
+
+ArrayInt& Wine::gsecond() {
+	return psecond();
+}
+*/
 
 Wine::Wine() {
 	label.clear();
@@ -55,8 +105,10 @@ Wine::Wine(const char* l, int y, const int yr[], const int bot[]) {
 	number_of_years = y;
 	ArrayInt a1(yr, y);
 	ArrayInt a2(bot, y);
-	p.first = a1;
-	p.second = a2;
+	mod_first(a1);
+	mod_second(a2);
+	// p.first = a1;
+	// p.second = a2;
 }
 
 Wine::Wine(const char* l, int y) {
@@ -77,8 +129,10 @@ void Wine::GetBottles() {
 	}
 	ArrayInt a1(arr1, number_of_years);
 	ArrayInt a2(arr2, number_of_years);
-	p.first = a1;
-	p.second = a2;
+	mod_first(a1);
+	mod_second(a2);
+	// p.first = a1;
+	// p.second = a2;
 	delete [] arr1;
 	delete [] arr2;
 	return;
@@ -89,7 +143,7 @@ string Wine::Label() {
 }
 
 int Wine::sum() {
-	return p.second.sum();
+	return psecond().sum();
 }
 
 void Wine::Show() {
@@ -98,7 +152,7 @@ void Wine::Show() {
 	cout << "Wine: " << label << endl;
 	cout << fill8 << "Year" << fill4 << "Bottles" << endl;
 	for (int i = 0; i < number_of_years; i++) {
-		cout << fill8 << p.first[i] << fill4 << p.second[i] << endl;
+		cout << fill8 << pfirst()[i] << fill4 << psecond()[i] << endl;
 	}
 	return;
 }
