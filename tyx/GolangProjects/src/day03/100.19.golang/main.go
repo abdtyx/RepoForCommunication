@@ -58,4 +58,5 @@ func main() {
 	endTime := time.Now().UnixNano()
 	seconds := float64((endTime - startTime) / 1e9)
 	fmt.Printf("%g", seconds)
+	return
 }
