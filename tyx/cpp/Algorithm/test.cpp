@@ -3,7 +3,12 @@
 using namespace std;
 
 int main() {
-    map<int, string> mp;
-    mp.clear();
-    return 0;
+    int n = 3;
+    for (int i = 0; i < (1<<n); i++) {
+        for (int j = 0; j < n; j++) {
+            if (((1<<j)^i) == 0) cout << 1 << ' ';
+            else cout << 0 << ' ';
+        }
+        cout << endl;
+    }
 }
