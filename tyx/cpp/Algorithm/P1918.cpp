@@ -11,6 +11,7 @@ bool mycmp(P a, P b) {
 int main() {
     int n;
     P pr[100005];
+    cin >> n;
     for (int i = 0; i < n; i++) {
         cin >> pr[i].first;
         pr[i].second = i;
