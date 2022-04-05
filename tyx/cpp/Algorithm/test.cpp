@@ -1,14 +1,11 @@
-#include <bits/stdc++.h>
-
+#include<cstdio>
+#include<iostream>
+#include<algorithm>           //包含sort
 using namespace std;
 
 int main() {
-    int n = 3;
-    for (int i = 0; i < (1<<n); i++) {
-        for (int j = 0; j < n; j++) {
-            if (((1<<j)^i) == 0) cout << 1 << ' ';
-            else cout << 0 << ' ';
-        }
-        cout << endl;
-    }
+    double a = 50.0 / 13.0;
+    double b = 100.0 / 26.0;
+    if (a == b) cout << 1;
+    return 0;
 }
