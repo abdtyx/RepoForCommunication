@@ -14,15 +14,22 @@ int main() {
     cin >> n;
     for (int i = 0; i < n; i++) {
         cin >> pr[i].first;
-        pr[i].second = i;
+        pr[i].second = i + 1;
     }
     int q;
     cin >> q;
     sort(pr, pr + n);
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < q; i++) {
         int tmp;
         cin >> tmp;
-        cout << lower_bound(pr, pr + n, tmp, mycmp)->second;
+        P* o = lower_bound(pr, pr + n, make_pair(tmp, 0), mycmp);
+        P* oo = upper_bound(pr, pr + n, make_pair(tmp, 0), mycmp);
+        if (o == pr + n || o == oo) {
+            cout << 0 << endl;
+        }
+        else {
+            cout << o->second << endl;
+        }
     }
     return 0;
 }
