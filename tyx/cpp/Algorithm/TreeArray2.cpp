@@ -29,7 +29,7 @@ int getsum(int i) {
 
 int main() {
     int i, input;
-    updata(i, a[i] - a[i] - 1);
+    updata(i, a[i] - a[i - 1]);
 
     int x, y, k;
     updata(x, k);

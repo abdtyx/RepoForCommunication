@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-long long n, sum[400005], tag[400005], lazy[400005];
+long long n, sum[400005], ta[400005], tm[400005];
 long long p = 571373;
 
 long long ls(long long k) {
@@ -20,15 +20,15 @@ long long rs(long long k) {
  * @param y 右段长度
  */
 void pushdown(long long k, long long x, long long y) {
-    if (tag[k] || lazy[k] != 1) {
-        sum[ls(k)] = (sum[ls(k)] * lazy[k] + tag[k] * x) % p;
-        tag[ls(k)] = (tag[ls(k)] * lazy[k] + tag[k]) % p;
-        lazy[ls(k)] = (lazy[ls(k)] * lazy[k]) % p;
-        sum[rs(k)] = (sum[rs(k)] * lazy[k] + tag[k] * y) % p;
-        tag[rs(k)] = (tag[rs(k)] * lazy[k] + tag[k]) % p;
-        lazy[rs(k)] = (lazy[rs(k)] * lazy[k]) % p;
-        tag[k] = 0;
-        lazy[k] = 1;
+    if (ta[k] || tm[k] != 1) {
+        sum[ls(k)] = (sum[ls(k)] * tm[k] + ta[k] * x) % p;
+        ta[ls(k)] = (ta[ls(k)] * tm[k] + ta[k]) % p;
+        tm[ls(k)] = (tm[ls(k)] * tm[k]) % p;
+        sum[rs(k)] = (sum[rs(k)] * tm[k] + ta[k] * y) % p;
+        ta[rs(k)] = (ta[rs(k)] * tm[k] + ta[k]) % p;
+        tm[rs(k)] = (tm[rs(k)] * tm[k]) % p;
+        ta[k] = 0;
+        tm[k] = 1;
     }
 }
 
@@ -50,7 +50,7 @@ void pushup(long long k) {
 void add(long long a, long long b, long long k, long long l, long long r, long long x) {
     if (a <= l && r <= b) {
         sum[k] = (sum[k] + (r - l + 1) * x) % p;
-        tag[k] = (tag[k] + x) % p;
+        ta[k] = (ta[k] + x) % p;
         return;
     }
     long long m = (l + r) >> 1;
@@ -74,8 +74,8 @@ void add(long long a, long long b, long long k, long long l, long long r, long l
 void mlt(long long a, long long b, long long k, long long l, long long r, long long x) {
     if (a <= l && r <= b) {
         sum[k] = (sum[k] * x) % p;
-        lazy[k] = (lazy[k] * x) % p;
-        tag[k] = (tag[k] * x) % p;
+        tm[k] = (tm[k] * x) % p;
+        ta[k] = (ta[k] * x) % p;
         return;
     }
     long long m = (l + r) >> 1;
@@ -110,8 +110,8 @@ long long ask(long long a, long long b, long long k, long long l, long long r) {
 
 int main() {
     long long m;
-    fill(lazy, lazy + 400005, 1);
-    // memset(lazy, 1, sizeof(lazy));
+    fill(tm, tm + 400005, 1);
+    // memset(tm, 1, sizeof(tm));
     cin >> n >> m >> p;
     for (long long i = 0; i < n; i++) {
         long long tmp;
