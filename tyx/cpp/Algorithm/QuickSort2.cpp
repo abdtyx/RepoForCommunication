@@ -50,7 +50,7 @@ int Paritition1(int A[], int low, int high)
                 else cout << "  ";
                 cout << " ";
             }
-            Sleep(2000);
+            Sleep(1000);
             break;
         }
         Print(A);
@@ -60,7 +60,7 @@ int Paritition1(int A[], int low, int high)
             else cout << "  ";
             cout << " ";
         }
-        Sleep(2000);
+        Sleep(1000);
         // A[low] = A[high];
         swap(A[low], A[high]);
         Print(A);
@@ -70,7 +70,7 @@ int Paritition1(int A[], int low, int high)
             else cout << "  ";
             cout << " ";
         }
-        Sleep(2000);
+        Sleep(1000);
         Print(A);
         for (int i = 0; i < n; i++) {
             if (i == low) cout << "Δ";
@@ -98,7 +98,7 @@ int Paritition1(int A[], int low, int high)
                 else cout << "  ";
                 cout << " ";
             }
-            Sleep(2000);
+            Sleep(1000);
             break;
         }
         Print(A);
@@ -108,7 +108,7 @@ int Paritition1(int A[], int low, int high)
             else cout << "  ";
             cout << " ";
         }
-        Sleep(2000);
+        Sleep(1000);
         // A[high] = A[low];
         swap(A[high], A[low]);
         Print(A);
@@ -118,7 +118,7 @@ int Paritition1(int A[], int low, int high)
             else cout << "  ";
             cout << " ";
         }
-        Sleep(2000);
+        Sleep(1000);
     }
     // Print(A);
     // for (int i = 0; i < n; i++) {
@@ -127,7 +127,7 @@ int Paritition1(int A[], int low, int high)
     //     else cout << "  ";
     //     cout << " ";
     // }
-    // Sleep(2000);
+    // Sleep(1000);
     // A[low] = pivot;
     // Print(A);
     // for (int i = 0; i < n; i++) {
@@ -136,7 +136,7 @@ int Paritition1(int A[], int low, int high)
     //     else cout << "  ";
     //     cout << " ";
     // }
-    // Sleep(2000);
+    // Sleep(1000);
     return low;
 }
 
@@ -147,7 +147,7 @@ void QuickSort(int A[], int low, int high) //快排母函数
         int pivot = Paritition1(A, low, high);
         Print(A);
         for (int i = 0; i < 30; i++) cout << ' ';
-        Sleep(3000);
+        Sleep(1000);
         QuickSort(A, low, pivot - 1);
         QuickSort(A, pivot + 1, high);
     }
@@ -156,12 +156,13 @@ void QuickSort(int A[], int low, int high) //快排母函数
 int main() {
     system("chcp 65001");
     system("cls");
+    system("pause");
     QuickSort(arr, 0, 9);
     Print(arr);
     for (int i = 0; i < n; i++) {
         cout << "√ ";
     }
-    Sleep(3000);
+    while (1) Sleep(1000);
     // for (int i = 0; i < 10; i++) {
     //     cout << arr[i] << ' ';
     // }

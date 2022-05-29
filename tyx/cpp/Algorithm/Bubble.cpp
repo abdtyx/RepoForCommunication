@@ -24,7 +24,7 @@ void BubbleSort(int a[], int n) {
         bool moo = false;
         Print(a);
         for (int k = 0; k < 30; k++) cout << ' ';
-        Sleep(3000);
+        Sleep(1000);
         for (int j = 0; j < n - i - 1; j++) {
             Print(a);
             for (int k = 0; k < n; k++) {
@@ -42,7 +42,7 @@ void BubbleSort(int a[], int n) {
                     else cout << "  ";
                     cout << " ";
                 }
-                Sleep(2000);
+                Sleep(1000);
                 swap(a[j], a[j + 1]);
                 Print(a);
                 for (int k = 0; k < n; k++) {
@@ -51,7 +51,7 @@ void BubbleSort(int a[], int n) {
                     else cout << "  ";
                     cout << " ";
                 }
-                Sleep(2000);
+                Sleep(1000);
                 moo = true;
             }
         }
@@ -60,7 +60,7 @@ void BubbleSort(int a[], int n) {
             for (int k = 0; k < n; k++) {
                 cout << "√ ";
             }
-            Sleep(3000);
+            Sleep(1000);
             break;
         }
     }
@@ -71,6 +71,10 @@ void BubbleSort(int a[], int n) {
 int main() {
     system("chcp 65001");
     system("cls");
+    system("pause");
     BubbleSort(arr, 10);
+    while (1) {
+        Sleep(1000);
+    }
     return 0;
 }
