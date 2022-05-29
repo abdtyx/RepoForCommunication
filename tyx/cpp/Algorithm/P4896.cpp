@@ -76,15 +76,15 @@ int main() {
     }
     //输出没被发现的学生
     int ctr = 0;
+    priority_queue<string, vector<string>, greater<string> > h;
     for (int i = 0; i < 5; i++) {
-        if (flag[i] && ctr == 0) {
-            cout << students[i].first;
-            ctr++;
-        }
-        else if (flag[i] && ctr != 0) {
-            cout << " " << students[i].first;
-            ctr++;
-        }
+        if (flag[i]) h.push(students[i].first);
+    }
+    ctr = h.size();
+    while (h.size()) {
+        cout << h.top();
+        h.pop();
+        if (h.size()) cout << ' ';
     }
     if (ctr != 0) cout << endl;
     if (ctr == 5)

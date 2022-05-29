@@ -49,7 +49,7 @@ void add(long long a, long long b, long long k, long long l, long long r, long l
         tag[k] += x;
         return;
     }
-    long long m = (l + r) >> 1;
+    long long m = (l + r) >> 1;         
     pushdown(k, m - l + 1, r - m);
     if (a <= m) add(a, b, ls(k), l, m, x);
     if (b > m) add(a, b, rs(k), m + 1, r, x);
