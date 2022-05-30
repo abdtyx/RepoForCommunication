@@ -4,6 +4,14 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+#ifndef _COURSE_HPP
+#include "Course.hpp"
+#endif
+
+#ifndef _STUDENT_HPP
+#include "Student.hpp"
+#endif
+
 /**
  * @brief one fhq-treap that orderly stores items whose type is T
  * 
