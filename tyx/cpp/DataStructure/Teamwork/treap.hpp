@@ -26,24 +26,27 @@ class treap {
     void print(int t0);
   public:
     treap() {}
-    /**
-     * @brief Construct a new treap object
-     * 
-     * @param func the pointer to the compare function of two Ts
-     */
-    treap(bool (*func)(T x,T y)) {
-        cmp=func;
-        T x0;
-        val.push_back(x0);
-        rnd.push_back(0);
-        lson.push_back(0);
-        rson.push_back(0);
-        sz.push_back(0);
-        return ;
-    }
+    treap(bool (*func)(T x,T y));
     void insert(T z);
     void output();
 };
+
+/**
+ * @brief Construct a new treap object with the given comparison
+ * 
+ * @param func the pointer to the compare function of two Ts
+ */
+template<class T>
+treap<T>::treap(bool (*func)(T x,T y)) {
+    cmp=func;
+    T x0;
+    val.push_back(x0);
+    rnd.push_back(0);
+    lson.push_back(0);
+    rson.push_back(0);
+    sz.push_back(0);
+    return ;
+}
 
 /**
  * @brief maintain the size of the subtree of t0
@@ -78,7 +81,7 @@ void treap<T>::split(int t0, T k,int &x,int &y) {
 
 /**
  * @brief merge two treaps
- * 
+ * S
  * @tparam T 
  * @param x root of one treap to be merged
  * @param y root of the other treap to be merged
@@ -133,9 +136,7 @@ template<class T>
 void treap<T>::print(int t0) {
     if(!t0) return ;
     print(lson[t0]);
-    //val[t0].print();
     cout<<val[t0].first;
-    //cout<<val[t0]<<" ";
     print(rson[t0]);
     return ;
 }
