@@ -20,12 +20,15 @@ map<string, vector<Student> > stunamemap;
 
 void menu();
 
+void head();
+
 int main() {
     system("chcp 65001");
     system("cls");
     cout << "学籍管理系统" << endl;
     cout << "============" << endl;
-    Course ct("平均分");
+    cout << fixed << setprecision(2);
+    Course ct("平均成绩");
     courses.push_back(ct);
     int m;
     cout << "请输入课程数量" << endl;
@@ -58,6 +61,9 @@ int main() {
             double dtmp;
             cin >> dtmp;
             stmp.append(make_pair(courses[j].coursename(), dtmp));
+            // courses[j].insertStudent(stmp);
+        }
+        for (int j = 1; j <= m; j++) {
             courses[j].insertStudent(stmp);
         }
         courses[0].insertavg(stmp, stmp.avg());
@@ -87,6 +93,7 @@ int main() {
                 for (auto i : courses) {
                     if (i.name == coursename) {
                         nameflag = false;
+                        head();
                         i.printall();
                         break;
                     }
@@ -96,6 +103,7 @@ int main() {
             }
             break;
         case 2:
+            head();
             courses[0].printall();
             break;
         case 3:
@@ -118,11 +126,11 @@ int main() {
             break;
         case 4:
             while (1) {
-                cout << "希望通过姓名还是学号查询？输入《姓名》or《学号》" << endl;
+                cout << "希望通过姓名还是学号查询？输入 `name` or `stuno`" << endl;
                 string c2;
                 cin >> c2;
                 bool flagout = false;
-                while (c2 != "姓名" && c2 != "学号") {
+                while (c2 != "name" && c2 != "stuno") {
                     cout << "输入有误！请重新输入（放弃输入请输入exit）：";
                     cin >> c2;
                     if (c2 == "exit") {
@@ -131,7 +139,7 @@ int main() {
                     }
                 }
                 if (flagout) break;
-                if (c2 == "姓名") {
+                if (c2 == "name") {
                     cout << "请输入学生姓名：";
                     string stuname;
                     cin >> stuname;
@@ -145,6 +153,7 @@ int main() {
                         }
                     }
                     if (!flagout) {
+                        head();
                         for (auto i : stunamemap[stuname]) {
                             cout << i;
                         }
@@ -152,7 +161,7 @@ int main() {
                     break;
                 }
                 if (flagout) break;
-                if (c2 == "学号") {
+                if (c2 == "stuno") {
                     cout << "请输入学生学号：";
                     string stuno;
                     cin >> stuno;
@@ -166,6 +175,7 @@ int main() {
                         }
                     }
                     if (!flagout) {
+                        head();
                         cout << stunomap[atoi(stuno.c_str())];
                     }
                     break;
@@ -191,4 +201,12 @@ void menu() {
     cout << "3. 求出各门课程的平均成绩、最高分、最低分、不及格人数、60-69分人数、70-79分人数、 80-89分人数、90分以上人数。" << endl;
     cout << "4. 根据姓名或学号查询某人的各门成绩。" << endl;
     cout << "5. 退出程序。" << endl;
+}
+
+void head() {
+    cout << "学号" << "\t" << "姓名";
+    for (auto i : courses) {
+        if (i.name != "平均分") cout << "\t" << i.name;
+    }
+    cout << "\t" << "平均成绩" << endl;
 }

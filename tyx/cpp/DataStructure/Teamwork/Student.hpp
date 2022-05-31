@@ -51,7 +51,7 @@ class Student{
             for (auto i : stu.scores) {
                 os << '\t' << i.second;
             }
-            os << "\t平均成绩：" << fixed << setprecision(2) << stu.avg();
+            os << "\t" << fixed << setprecision(2) << stu.avg();
             os << endl;
             return os;
         }

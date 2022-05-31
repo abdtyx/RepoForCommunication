@@ -26,8 +26,8 @@ inline bool cmp(P a, P b) {
 
 class Course {
     public:
-        string name;
-        double sumScore;
+        string name;        // 课程名
+        double sumScore;    // 所有学生总分
         double maxScore;
         double minScore;
         int numStudent;
@@ -142,7 +142,7 @@ class Course {
 
         void printdata() {
             cout << "平均成绩\t最高分\t最低分\t不及格人数\t60-69分人数\t70-79分人数\t80-89分人数\t90分以上人数" << endl;
-            cout << fixed << setprecision(2) << avg() << '\t' << maxscore() << '\t' << minscore() << '\t' << numf() << '\t' << numd() << '\t' << numc() << '\t' << numb() << '\t' << numa() << endl;
+            cout << fixed << setprecision(2) << avg() << "\t\t" << maxscore() << '\t' << minscore() << '\t' << numf() << "\t\t" << numd() << "\t\t" << numc() << "\t\t" << numb() << "\t\t" << numa() << endl;
         }
 
         string coursename() {
