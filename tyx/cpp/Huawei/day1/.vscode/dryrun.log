@@ -1,0 +1,6 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make.exe: Entering directory 'e:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei'
+gcc -c main.c -o main.o
+gcc main.o -o main
+make.exe: Leaving directory 'e:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei'
+ 

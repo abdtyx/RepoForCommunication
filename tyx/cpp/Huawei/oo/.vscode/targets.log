@@ -1,0 +1,310 @@
+make.exe: *** No rule to make target 'all'.  Stop.
+
+# GNU Make 4.2.1
+# Built for x86_64-w64-mingw32
+# Copyright (C) 1988-2016 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Tue Jun 28 10:46:27 2022
+
+# Variables
+
+# 'override' directive
+GNUMAKEFLAGS := 
+# automatic
+<D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
+# automatic
+?F = $(notdir $?)
+# default
+.SHELLFLAGS := -c
+# makefile
+MAKEFLAGS = pqrR
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
+# automatic
+@D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
+# environment
+HOMEDRIVE = C:
+# automatic
+@F = $(notdir $@)
+# automatic
+^D = $(patsubst %/,%,$(patsubst %\,%,$(dir $^)))
+# makefile
+CURDIR := e:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo
+# default
+SHELL := sh.exe
+# environment
+WINDIR = C:\WINDOWS
+# environment
+VSCODE_NLS_CONFIG = {"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"bbca1a7059cee8a1b93da8947fee1c4f.zh-cn","_translationsConfigFile":"C:\\Users\\Msipc\\AppData\\Roaming\\Code\\clp\\bbca1a7059cee8a1b93da8947fee1c4f.zh-cn\\tcf.json","_cacheRoot":"C:\\Users\\Msipc\\AppData\\Roaming\\Code\\clp\\bbca1a7059cee8a1b93da8947fee1c4f.zh-cn","_resolvedLanguagePackCoreLocation":"C:\\Users\\Msipc\\AppData\\Roaming\\Code\\clp\\bbca1a7059cee8a1b93da8947fee1c4f.zh-cn\\30d9c6cd9483b2cc586687151bcbcd635f373630","_corruptedFile":"C:\\Users\\Msipc\\AppData\\Roaming\\Code\\clp\\bbca1a7059cee8a1b93da8947fee1c4f.zh-cn\\corrupted.info","_languagePackSupport":true}
+# environment
+ONEDRIVE = C:\Users\Msipc\OneDrive
+# environment
+PUBLIC = C:\Users\Public
+# environment
+PATHEXT = .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+# makefile
+MAKEFILE_LIST := 
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
+# environment
+GO111MODULE = on
+# environment
+TMP = C:\Users\Msipc\AppData\Local\Temp
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+PROGRAMW6432 = C:\Program Files
+# environment
+PROGRAMDATA = C:\ProgramData
+# environment
+VSCODE_IPC_HOOK_EXTHOST = \\.\pipe\vscode-ipc-d21ac0e1-9e04-48ad-bd1d-3c44f9aca8d7-sock
+# environment
+VSCODE_CWD = E:\cpp\Microsoft VS Code
+# default
+MAKE_HOST := x86_64-w64-mingw32
+# environment
+PATH = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2\libnvvp;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Program Files (x86)\Razer\ChromaBroadcast\bin;C:\Program Files\Razer\ChromaBroadcast\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Java\jdk-14.0.2\bin;.;C:\Program Files\Java\jdk-14.0.2\lib;C:\Program Files\Java\jdk-14.0.2\lib\tool.jar;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;E:\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files\dotnet\;C:\Users\Msipc\AppData\Local\Microsoft\WindowsApps;E:\Microsoft VS Code\bin;C:\Users\Msipc\.dotnet\tools;E:\Programming Studio\Matlab\bin;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Go\bin;E:\cpp\Microsoft VS Code\bin;E:\Programming Studio\mingw64\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Common Files\Autodesk Shared\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;E:\Programming Studio\Xshell\;E:\Programming Studio\Xftp\;E:\cpp\Qt\6.2.1\mingw81_64\bin;E:\cpp\Qt\Tools\mingw810_64\bin;C:\Python39\Lib\site-packages\torch\lib;E:\Programming Studio\CMake\bin;E:\Programming Studio\x86_64-8.1.0-release-posix-seh-rt_v6-rev0\mingw64\bin;C:\Python39\Scripts\;C:\Python39\;C:\Users\Msipc\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Azure Data Studio\bin;C:\Users\Msipc\go\bin;E:\Programming Studio\GoLand 2021.3.2\bin;;C:\Users\Msipc\.dotnet\tools;;E:\Programming Studio\IntelliJ IDEA Community Edition 2021.3.1\bin;
+# environment
+COMMONPROGRAMW6432 = C:\Program Files\Common Files
+# environment
+PROCESSOR_ARCHITECTURE = AMD64
+# environment
+GOINSECURE = http://git.ana
+# environment
+USERPROFILE = C:\Users\Msipc
+# environment
+ALLUSERSPROFILE = C:\ProgramData
+# environment
+GOPATH = E:\cpp\GolangProjects
+# environment
+VSCODE_LOG_STACK = false
+# environment
+NUMBER_OF_PROCESSORS = 16
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync
+# automatic
+%F = $(notdir $%)
+# environment
+GOBIN = E:\cpp\GolangProjects\bin
+# environment
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_2712_RAEGEAPMGNUQXBCX
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+COMPUTERNAME = MSI
+# environment
+PROGRAMFILES = C:\Program Files
+# environment
+GOLAND = E:\Programming Studio\GoLand 2021.3.2\bin;
+# default
+.LOADED := 
+# environment
+CUDA_PATH_V11_2 = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2
+# environment
+DRIVERDATA = C:\Windows\System32\Drivers\DriverData
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# environment
+USERNAME = Msipc
+# environment
+KMP_DUPLICATE_LIB_OK = TRUE
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
+# environment
+VSCODE_CODE_CACHE_PATH = C:\Users\Msipc\AppData\Roaming\Code\CachedData\30d9c6cd9483b2cc586687151bcbcd635f373630
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
+# environment
+COMMONPROGRAMFILES = C:\Program Files\Common Files
+# environment
+LOGONSERVER = \\MSI
+# environment
+ONEDRIVECONSUMER = C:\Users\Msipc\OneDrive
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# environment
+USERDOMAIN = MSI
+# environment
+MAKELEVEL := 0
+# environment
+INTELLIJ IDEA COMMUNITY EDITION = E:\Programming Studio\IntelliJ IDEA Community Edition 2021.3.1\bin;
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+JAVA_HOME = C:\Program Files\Java\jdk-14.0.2
+# default
+MAKE_VERSION := 4.2.1
+# makefile
+.DEFAULT_GOAL := 
+# environment
+GOROOT = C:\Go
+# environment
+CLASSPATH = .;C:\Program Files\Java\jdk-14.0.2\lib;C:\Program Files\Java\jdk-14.0.2\lib\tool.jar
+# environment
+PROGRAMFILES(X86) = C:\Program Files (x86)
+# automatic
+%D = $(patsubst %/,%,$(patsubst %\,%,$(dir $%)))
+# environment
+LOCALAPPDATA = C:\Users\Msipc\AppData\Local
+# environment
+PSMODULEPATH = C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+# default
+MAKE_COMMAND := make.exe
+# default
+.VARIABLES := 
+# automatic
+*F = $(notdir $*)
+# environment
+PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 165 Stepping 2, GenuineIntel
+# environment
+OS = Windows_NT
+# environment
+VSCODE_IPC_HOOK = \\.\pipe\1bf8df589db97b683eaf8c02ab8eb730-1.68.1-main-sock
+# environment
+HOMEPATH = \Users\Msipc
+# environment
+COMMONPROGRAMFILES(X86) = C:\Program Files (x86)\Common Files
+# environment
+PROMPT = $P$G
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
+# environment
+SYSTEMROOT = C:\WINDOWS
+# automatic
++D = $(patsubst %/,%,$(patsubst %\,%,$(dir $+)))
+# automatic
++F = $(notdir $+)
+# environment
+APPDATA = C:\Users\Msipc\AppData\Roaming
+# environment
+TEMP = C:\Users\Msipc\AppData\Local\Temp
+# environment
+COMSPEC = C:\WINDOWS\system32\cmd.exe
+# default
+MAKEFILES := 
+# environment
+ADSK_3DSMAX_X64_2020 = D:\3dsmax 2020\3ds Max 2020\
+# automatic
+<F = $(notdir $<)
+# environment
+MKL_SERIAL = YES
+# environment
+GOPRIVATE = http://git.ana
+# environment
+LC_ALL = C
+# environment
+ADSK_3DSMAX_X64_2021 = D:\��װ�����λ��\3dsmax\3ds Max 2021\
+# environment
+CONFIGSETROOT = C:\WINDOWS\ConfigSetRoot
+# automatic
+^F = $(notdir $^)
+# environment
+CUDA_PATH = C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v11.2
+# default
+SUFFIXES := 
+# environment
+SYSTEMDRIVE = C:
+# environment
+SESSIONNAME = Console
+# environment
+PROCESSOR_REVISION = a502
+# default
+.RECIPEPREFIX := 
+# environment
+LANG = C
+# environment
+PROCESSOR_LEVEL = 6
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
+# environment
+VSCODE_PID = 2712
+# environment
+USERDOMAIN_ROAMINGPROFILE = MSI
+# variable set hash-table stats:
+# Load=110/1024=11%, Rehash=0, Collisions=16/128=13%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (key e:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo, mtime 1656384387): 8 files, no impossibilities.
+
+# 8 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+all:
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+makefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+makefile.mak:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+GNUmakefile:
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Failed to be updated.
+
+# files hash-table stats:
+# Load=7/1024=1%, Rehash=0, Collisions=0/16=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 15 / storage = 120 B / avg = 8 B
+# current buf: size = 8162 B / used = 120 B / count = 15 / avg = 8 B
+
+# strcache performance: lookups = 17 / hit rate = 11%
+# hash-table stats:
+# Load=15/8192=0%, Rehash=0, Collisions=1/17=6%
+# Finished Make data base on Tue Jun 28 10:46:27 2022
+
+ 

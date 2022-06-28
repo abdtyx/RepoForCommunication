@@ -1,0 +1,2 @@
+"E:\Programming Studio\mingw64\bin\ar.exe" qc liboo_src.a CMakeFiles/oo_src.dir/person.cpp.obj
+"E:\Programming Studio\mingw64\bin\ranlib.exe" liboo_src.a

@@ -1,0 +1,12 @@
+[
+{
+  "directory": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/test5/build",
+  "command": "\"E:\\Programming Studio\\mingw64\\bin\\gcc.exe\"   -g -o CMakeFiles\\test5.dir\\src\\func1.c.obj -c E:\\cpp\\git_repository\\RepoForCommunication\\tyx\\cpp\\Huawei\\test5\\src\\func1.c",
+  "file": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/test5/src/func1.c"
+},
+{
+  "directory": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/test5/build",
+  "command": "\"E:\\Programming Studio\\mingw64\\bin\\gcc.exe\"   -g -o CMakeFiles\\test5.dir\\src\\main.c.obj -c E:\\cpp\\git_repository\\RepoForCommunication\\tyx\\cpp\\Huawei\\test5\\src\\main.c",
+  "file": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/test5/src/main.c"
+}
+]

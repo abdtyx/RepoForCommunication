@@ -1,0 +1,12 @@
+[
+{
+  "directory": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/Fixed/build",
+  "command": "\"E:\\Programming Studio\\mingw64\\bin\\g++.exe\"   -g -std=gnu++14 -o CMakeFiles\\trainng_code.dir\\main.cpp.obj -c E:\\cpp\\git_repository\\RepoForCommunication\\tyx\\cpp\\Huawei\\Fixed\\main.cpp",
+  "file": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/Fixed/main.cpp"
+},
+{
+  "directory": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/Fixed/build",
+  "command": "\"E:\\Programming Studio\\mingw64\\bin\\g++.exe\"   -g -std=gnu++14 -o CMakeFiles\\trainng_code.dir\\intelligent_driving.cpp.obj -c E:\\cpp\\git_repository\\RepoForCommunication\\tyx\\cpp\\Huawei\\Fixed\\intelligent_driving.cpp",
+  "file": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/Fixed/intelligent_driving.cpp"
+}
+]

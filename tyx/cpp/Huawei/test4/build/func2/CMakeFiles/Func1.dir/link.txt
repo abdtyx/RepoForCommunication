@@ -1,0 +1,2 @@
+"E:\Programming Studio\mingw64\bin\ar.exe" qc libFunc1.a CMakeFiles/Func1.dir/func1.c.obj
+"E:\Programming Studio\mingw64\bin\ranlib.exe" libFunc1.a

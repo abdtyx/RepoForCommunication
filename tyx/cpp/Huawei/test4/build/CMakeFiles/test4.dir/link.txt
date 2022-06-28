@@ -1,0 +1,3 @@
+"E:\Programming Studio\CMake\bin\cmake.exe" -E rm -f CMakeFiles\test4.dir/objects.a
+"E:\Programming Studio\mingw64\bin\ar.exe" qc CMakeFiles\test4.dir/objects.a @CMakeFiles\test4.dir\objects1.rsp
+"E:\Programming Studio\mingw64\bin\gcc.exe" -g -Wl,--whole-archive CMakeFiles\test4.dir/objects.a -Wl,--no-whole-archive -o E:\cpp\git_repository\RepoForCommunication\tyx\cpp\Huawei\test4\bin\test4.exe -Wl,--out-implib,E:\cpp\git_repository\RepoForCommunication\tyx\cpp\Huawei\test4\bin\libtest4.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\test4.dir\linklibs.rsp

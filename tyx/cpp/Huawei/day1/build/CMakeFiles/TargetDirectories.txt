@@ -1,0 +1,3 @@
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/build/CMakeFiles/hello.dir
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/build/CMakeFiles/edit_cache.dir
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,22 @@
+[
+{
+  "directory": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/test4/build",
+  "command": "\"E:\\Programming Studio\\mingw64\\bin\\gcc.exe\"   -g -o CMakeFiles\\test4.dir\\main.c.obj -c E:\\cpp\\git_repository\\RepoForCommunication\\tyx\\cpp\\Huawei\\test4\\main.c",
+  "file": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/test4/main.c"
+},
+{
+  "directory": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/test4/build",
+  "command": "\"E:\\Programming Studio\\mingw64\\bin\\gcc.exe\"   -g -o CMakeFiles\\test4.dir\\func1\\func1.c.obj -c E:\\cpp\\git_repository\\RepoForCommunication\\tyx\\cpp\\Huawei\\test4\\func1\\func1.c",
+  "file": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/test4/func1/func1.c"
+},
+{
+  "directory": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/test4/build",
+  "command": "\"E:\\Programming Studio\\mingw64\\bin\\gcc.exe\"   -g -o CMakeFiles\\test4.dir\\func2\\func2.c.obj -c E:\\cpp\\git_repository\\RepoForCommunication\\tyx\\cpp\\Huawei\\test4\\func2\\func2.c",
+  "file": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/test4/func2/func2.c"
+},
+{
+  "directory": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/test4/build",
+  "command": "\"E:\\Programming Studio\\mingw64\\bin\\gcc.exe\"   -g -o CMakeFiles\\test4.dir\\func3.c.obj -c E:\\cpp\\git_repository\\RepoForCommunication\\tyx\\cpp\\Huawei\\test4\\func3.c",
+  "file": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/test4/func3.c"
+}
+]

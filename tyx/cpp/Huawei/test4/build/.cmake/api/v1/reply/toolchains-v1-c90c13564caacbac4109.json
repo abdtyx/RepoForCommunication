@@ -1,0 +1,88 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"E:/Programming Studio/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
+						"E:/Programming Studio/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
+						"E:/Programming Studio/mingw64/x86_64-w64-mingw32/include"
+					],
+					"linkDirectories" : [],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : []
+				},
+				"path" : "E:/Programming Studio/mingw64/bin/gcc.exe",
+				"version" : "8.1.0"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"E:/Programming Studio/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++",
+						"E:/Programming Studio/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32",
+						"E:/Programming Studio/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward",
+						"E:/Programming Studio/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include",
+						"E:/Programming Studio/mingw64/lib/gcc/x86_64-w64-mingw32/8.1.0/include-fixed",
+						"E:/Programming Studio/mingw64/x86_64-w64-mingw32/include"
+					],
+					"linkDirectories" : [],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : []
+				},
+				"path" : "E:/Programming Studio/mingw64/bin/g++.exe",
+				"version" : "8.1.0"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"implicit" : {},
+				"path" : "E:/Programming Studio/mingw64/bin/windres.exe"
+			},
+			"language" : "RC",
+			"sourceFileExtensions" : 
+			[
+				"rc",
+				"RC"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

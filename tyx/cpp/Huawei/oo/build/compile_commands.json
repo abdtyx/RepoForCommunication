@@ -1,0 +1,22 @@
+[
+{
+  "directory": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/src",
+  "command": "\"E:\\Programming Studio\\mingw64\\bin\\g++.exe\"  @CMakeFiles/oo_src.dir/includes_CXX.rsp -g -o CMakeFiles\\oo_src.dir\\person.cpp.obj -c E:\\cpp\\git_repository\\RepoForCommunication\\tyx\\cpp\\Huawei\\oo\\src\\person.cpp",
+  "file": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/src/person.cpp"
+},
+{
+  "directory": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/test",
+  "command": "\"E:\\Programming Studio\\mingw64\\bin\\g++.exe\"  @CMakeFiles/oo_test.dir/includes_CXX.rsp -g -o CMakeFiles\\oo_test.dir\\oo_test.cc.obj -c E:\\cpp\\git_repository\\RepoForCommunication\\tyx\\cpp\\Huawei\\oo\\test\\oo_test.cc",
+  "file": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/test/oo_test.cc"
+},
+{
+  "directory": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/thirdparty/googletest",
+  "command": "\"E:\\Programming Studio\\mingw64\\bin\\g++.exe\"  @CMakeFiles/gtest.dir/includes_CXX.rsp -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wno-deprecated-declarations -o CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj -c E:\\cpp\\git_repository\\RepoForCommunication\\tyx\\cpp\\Huawei\\oo\\thirdparty\\googletest\\src\\gtest-all.cc",
+  "file": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/thirdparty/googletest/src/gtest-all.cc"
+},
+{
+  "directory": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/thirdparty/googletest",
+  "command": "\"E:\\Programming Studio\\mingw64\\bin\\g++.exe\"  @CMakeFiles/gtest_main.dir/includes_CXX.rsp -g -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wno-deprecated-declarations -o CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj -c E:\\cpp\\git_repository\\RepoForCommunication\\tyx\\cpp\\Huawei\\oo\\thirdparty\\googletest\\src\\gtest_main.cc",
+  "file": "E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/thirdparty/googletest/src/gtest_main.cc"
+}
+]

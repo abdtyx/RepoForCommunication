@@ -1,0 +1,14 @@
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/CMakeFiles/edit_cache.dir
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/CMakeFiles/rebuild_cache.dir
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/src/CMakeFiles/oo_src.dir
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/src/CMakeFiles/edit_cache.dir
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/src/CMakeFiles/rebuild_cache.dir
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/test/CMakeFiles/oo_test.dir
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/test/CMakeFiles/edit_cache.dir
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/test/CMakeFiles/rebuild_cache.dir
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/thirdparty/CMakeFiles/edit_cache.dir
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/thirdparty/CMakeFiles/rebuild_cache.dir
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/thirdparty/googletest/CMakeFiles/gtest.dir
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/thirdparty/googletest/CMakeFiles/gtest_main.dir
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/thirdparty/googletest/CMakeFiles/edit_cache.dir
+E:/cpp/git_repository/RepoForCommunication/tyx/cpp/Huawei/oo/build/thirdparty/googletest/CMakeFiles/rebuild_cache.dir
